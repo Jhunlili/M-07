@@ -39,8 +39,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .brand{font-weight:700;font-size:36px;letter-spacing:-.03em;line-height:1}
 .brand:hover{color:var(--hover)}
 .bsub{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#6f6f6f;margin-top:8px}
-.snav .label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#5c5c5c;font-weight:400;margin:14px 0 3px;padding-top:11px;border-top:1px solid #1f1f1f}
-.snav a{display:grid;grid-template-columns:30px 1fr;align-items:baseline;font-size:15.5px;line-height:1.35;padding:3.5px 0;color:#8f8f8f;transition:color .15s}
+.snav .label{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#5c5c5c;font-weight:400;margin:12px 0 2px;padding-top:10px;border-top:1px solid #1f1f1f}
+.snav a{display:grid;grid-template-columns:30px 1fr;align-items:baseline;font-size:15px;line-height:1.3;padding:3px 0;color:#8f8f8f;transition:color .15s}
 .snav a .k{font-size:11.5px;letter-spacing:.1em;color:#555}
 .snav a:hover,.snav a:hover .k{color:var(--hover)}
 .snav a[aria-current="page"]{color:#fff}
@@ -450,6 +450,52 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   .mm{padding:0}
 }
 
+
+/* ================= v5 : concurrence ================= */
+.pmap{position:relative;aspect-ratio:16/8;border:1px solid #333;
+  background:linear-gradient(#262626,#262626) center/1px 100% no-repeat,linear-gradient(#262626,#262626) center/100% 1px no-repeat}
+.pmap .zone-me{position:absolute;left:50%;top:0;width:50%;height:50%;background:rgba(46,175,120,.08);border-left:1px solid rgba(46,175,120,.35);border-bottom:1px solid rgba(46,175,120,.35)}
+.pmap .zone-me span{position:absolute;right:14px;bottom:10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700}
+.pmap .ax{position:absolute;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#7a7a7a;white-space:nowrap}
+.pmap .ax.t{top:8px;left:50%;transform:translateX(-50%);background:#000;padding:0 8px}
+.pmap .ax.b{bottom:8px;left:50%;transform:translateX(-50%);background:#000;padding:0 8px}
+.pmap .ax.l{left:10px;top:50%;transform:translateY(-50%);background:#000;padding:4px 0}
+.pmap .ax.r{right:10px;top:50%;transform:translateY(-50%);background:#000;padding:4px 0}
+.pt{position:absolute;transform:translate(-6px,-50%);display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:clamp(12px,1vw,16px);color:#ddd;z-index:1}
+.pt.l{flex-direction:row-reverse;transform:translate(calc(-100% + 6px),-50%)}
+.pt i{display:block;width:12px;height:12px;background:#bbb;flex:none}
+.pt em{font-style:normal;color:#777;font-size:.85em}
+.pt.me{font-weight:700;font-size:clamp(15px,1.4vw,22px);color:#fff}
+.pt.me i{width:18px;height:18px;background:var(--acc)}
+.cmpt-wrap{overflow-x:auto;border:1px solid #333;-webkit-overflow-scrolling:touch}
+table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
+.cmpt th,.cmpt td{padding:14px 10px;border-bottom:1px solid #1f1f1f;text-align:center;vertical-align:middle}
+.cmpt thead th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#bdbdbd;font-weight:700;vertical-align:bottom;line-height:1.35;border-bottom:1px solid #333}
+.cmpt thead th small{display:block;font-weight:400;letter-spacing:.04em;text-transform:none;color:#777;font-size:12px;margin-top:4px}
+.cmpt thead th.me{color:var(--acc)}
+.cmpt tbody th{text-align:left;font-weight:400;font-size:clamp(15px,1.05vw,17px);color:#e2e2e2;position:sticky;left:0;background:#000;min-width:230px;padding-left:18px}
+.cmpt td.me,.cmpt th.me{background:rgba(167,123,255,.09)}
+.cmpt td small{display:block;font-size:11.5px;color:#8a8a8a;margin-top:5px;line-height:1.3}
+.mk{display:inline-block;width:16px;height:16px;border:1.5px solid #ddd;vertical-align:middle}
+.mk.y{background:#ddd}
+.mk.p{background:linear-gradient(90deg,#ddd 50%,transparent 50%)}
+.mk.n{border-color:#444}
+.me .mk{border-color:var(--acc)}
+.me .mk.y{background:var(--acc)}
+.mklegend{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.mklegend span{display:inline-flex;align-items:center;gap:9px}
+@media(max-width:640px){
+  .pmap{aspect-ratio:4/5}
+  .pmap .ax.l,.pmap .ax.r{writing-mode:vertical-rl;transform:translateY(-50%) rotate(180deg);padding:0 2px}
+  .pmap .ax.r{transform:translateY(-50%)}
+  .pt{font-size:11.5px;gap:6px}
+  .pt.me{font-size:14px}
+  .pt em{display:none}
+  .pmap .zone-me span{display:none}
+  .mob-only{display:block!important}
+}
+.mob-only{display:none}
+
 @media(hover:none){.kbdhint{display:none}}
 </style>
 </head>
@@ -471,25 +517,26 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <div class="label">Le projet</div>
     <a href="#marche"><span class="k">01</span><span>Le marché</span></a>
     <a href="#demande"><span class="k">02</span><span>La demande</span></a>
-    <a href="#valeur"><span class="k">03</span><span>La proposition de valeur</span></a>
-    <a href="#debutants"><span class="k">04</span><span>Débutants et étudiants</span></a>
+    <a href="#concurrence"><span class="k">03</span><span>La concurrence</span></a>
+    <a href="#valeur"><span class="k">04</span><span>La proposition de valeur</span></a>
+    <a href="#debutants"><span class="k">05</span><span>Débutants et étudiants</span></a>
     <div class="label">Le fonctionnement</div>
-    <a href="#acteurs"><span class="k">05</span><span>Les acteurs</span></a>
-    <a href="#fiche"><span class="k">06</span><span>La fiche projet</span></a>
-    <a href="#cycle"><span class="k">07</span><span>Le cycle d'une mission</span></a>
-    <a href="#profils"><span class="k">08</span><span>Les niveaux</span></a>
-    <a href="#reco"><span class="k">09</span><span>Les recommandations</span></a>
-    <a href="#jalons"><span class="k">10</span><span>Le paiement par jalons</span></a>
+    <a href="#acteurs"><span class="k">06</span><span>Les acteurs</span></a>
+    <a href="#fiche"><span class="k">07</span><span>La fiche projet</span></a>
+    <a href="#cycle"><span class="k">08</span><span>Le cycle d'une mission</span></a>
+    <a href="#profils"><span class="k">09</span><span>Les niveaux</span></a>
+    <a href="#reco"><span class="k">10</span><span>Les recommandations</span></a>
+    <a href="#jalons"><span class="k">11</span><span>Le paiement par jalons</span></a>
     <div class="label">La confiance</div>
-    <a href="#garanties"><span class="k">11</span><span>Les garanties</span></a>
-    <a href="#abus"><span class="k">12</span><span>Notes et abus</span></a>
-    <a href="#contrat"><span class="k">13</span><span>Le contrat</span></a>
-    <a href="#verification"><span class="k">14</span><span>Le contrôle</span></a>
+    <a href="#garanties"><span class="k">12</span><span>Les garanties</span></a>
+    <a href="#abus"><span class="k">13</span><span>Notes et abus</span></a>
+    <a href="#contrat"><span class="k">14</span><span>Le contrat</span></a>
+    <a href="#verification"><span class="k">15</span><span>Le contrôle</span></a>
     <div class="label">Le lancement</div>
-    <a href="#cas"><span class="k">15</span><span>Un cas chiffré</span></a>
-    <a href="#modele"><span class="k">16</span><span>Le modèle économique</span></a>
-    <a href="#legal"><span class="k">17</span><span>Le cadre légal</span></a>
-    <a href="#feuille"><span class="k">18</span><span>La feuille de route</span></a>
+    <a href="#cas"><span class="k">16</span><span>Un cas chiffré</span></a>
+    <a href="#modele"><span class="k">17</span><span>Le modèle économique</span></a>
+    <a href="#legal"><span class="k">18</span><span>Le cadre légal</span></a>
+    <a href="#feuille"><span class="k">19</span><span>La feuille de route</span></a>
   </nav>
   <div class="sfoot">Un projet de Lydia Abid · novembre 2026<span class="kbdhint"><br><span class="kbd">←</span> <span class="kbd">→</span> changer de page</span></div>
 </aside>
@@ -523,31 +570,32 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
       <div class="label">Le projet</div>
       <a href="#marche"><span class="n">01</span><span>Le marché</span></a>
       <a href="#demande"><span class="n">02</span><span>La demande</span></a>
-      <a href="#valeur"><span class="n">03</span><span>La proposition de valeur</span></a>
-      <a href="#debutants"><span class="n">04</span><span>Débutants et étudiants</span></a>
+      <a href="#concurrence"><span class="n">03</span><span>La concurrence</span></a>
+      <a href="#valeur"><span class="n">04</span><span>La proposition de valeur</span></a>
+      <a href="#debutants"><span class="n">05</span><span>Débutants et étudiants</span></a>
     </div>
     <div class="cat">
       <div class="label">Le fonctionnement</div>
-      <a href="#acteurs"><span class="n">05</span><span>Les acteurs</span></a>
-      <a href="#fiche"><span class="n">06</span><span>La fiche projet</span></a>
-      <a href="#cycle"><span class="n">07</span><span>Le cycle d'une mission</span></a>
-      <a href="#profils"><span class="n">08</span><span>Les niveaux</span></a>
-      <a href="#reco"><span class="n">09</span><span>Les recommandations</span></a>
-      <a href="#jalons"><span class="n">10</span><span>Le paiement par jalons</span></a>
+      <a href="#acteurs"><span class="n">06</span><span>Les acteurs</span></a>
+      <a href="#fiche"><span class="n">07</span><span>La fiche projet</span></a>
+      <a href="#cycle"><span class="n">08</span><span>Le cycle d'une mission</span></a>
+      <a href="#profils"><span class="n">09</span><span>Les niveaux</span></a>
+      <a href="#reco"><span class="n">10</span><span>Les recommandations</span></a>
+      <a href="#jalons"><span class="n">11</span><span>Le paiement par jalons</span></a>
     </div>
     <div class="cat">
       <div class="label">La confiance</div>
-      <a href="#garanties"><span class="n">11</span><span>Les garanties</span></a>
-      <a href="#abus"><span class="n">12</span><span>Notes et abus</span></a>
-      <a href="#contrat"><span class="n">13</span><span>Le contrat</span></a>
-      <a href="#verification"><span class="n">14</span><span>Le contrôle</span></a>
+      <a href="#garanties"><span class="n">12</span><span>Les garanties</span></a>
+      <a href="#abus"><span class="n">13</span><span>Notes et abus</span></a>
+      <a href="#contrat"><span class="n">14</span><span>Le contrat</span></a>
+      <a href="#verification"><span class="n">15</span><span>Le contrôle</span></a>
     </div>
     <div class="cat">
       <div class="label">Le lancement</div>
-      <a href="#cas"><span class="n">15</span><span>Un cas chiffré</span></a>
-      <a href="#modele"><span class="n">16</span><span>Le modèle économique</span></a>
-      <a href="#legal"><span class="n">17</span><span>Le cadre légal</span></a>
-      <a href="#feuille"><span class="n">18</span><span>La feuille de route</span></a>
+      <a href="#cas"><span class="n">16</span><span>Un cas chiffré</span></a>
+      <a href="#modele"><span class="n">17</span><span>Le modèle économique</span></a>
+      <a href="#legal"><span class="n">18</span><span>Le cadre légal</span></a>
+      <a href="#feuille"><span class="n">19</span><span>La feuille de route</span></a>
     </div>
   </nav>
 
@@ -646,6 +694,20 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     </div>
   </div>
 
+  <div class="sec">
+    <div class="shd"><h2>Les statuts visés</h2><p>Micro-entrepreneurs et artistes-auteurs, les deux statuts acceptés par M&#8209;07.</p></div>
+    <div class="grid g2">
+      <div class="stat">
+        <div class="donut" data-center="55 %" data-aria="55 % des auto-entrepreneurs économiquement actifs" data-segs='[{"v":55,"c":"var(--orange)","n":"Économiquement actifs","l":"1,66 million"},{"v":45,"c":"var(--track)","n":"Sans chiffre d affaires","l":"45 %"}]'></div>
+        <div><p class="sv">des 3,03 millions d'auto-entrepreneurs inscrits fin 2025 sont économiquement actifs, soit 1,66 million de personnes.</p><p class="so">Urssaf, fin 2025</p></div>
+      </div>
+      <div class="stat">
+        <div class="donut" data-center="67 %" data-aria="67 % des artistes-auteurs ont un autre revenu" data-segs='[{"v":67,"c":"var(--acc)","n":"Avec un autre revenu","l":"67 %"},{"v":33,"c":"var(--track)","n":"Revenu artistique seul","l":"33 %"}]'></div>
+        <div><p class="sv">des quelque 350&nbsp;000 artistes-auteurs perçoivent un autre revenu d'activité en plus de leur revenu artistique.</p><p class="so">Ministère de la Culture (DEPS), données 2023</p></div>
+      </div>
+    </div>
+  </div>
+
   <div class="statement">
     <span class="plabel">L'opportunité</span>
     <p>Une offre de talents qui cherche des missions, une demande de compétences qui cherche de la flexibilité : M&#8209;07 les met en relation dans un cadre sécurisé, pensé pour le jeu vidéo.</p>
@@ -654,7 +716,92 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   <p class="src">Sources :
     <a href="https://www.lejournaldesentreprises.com/article/plus-dun-jeune-actif-sur-trois-envisage-de-devenir-freelance-dici-2030-2147458" target="_blank" rel="noopener">Freelance.com × Selvitys (Le Journal des Entreprises)</a> ·
     <a href="https://blog.fiverr.com/post/la-generation-z-envisage-travailler-en-tant-que-freelance" target="_blank" rel="noopener">Fiverr, génération Z</a> ·
-    <a href="https://www.codeur.com/blog/freelances-entreprise-etude-2026/" target="_blank" rel="noopener">Baromètre freelance en entreprise 2026 (Codeur.com)</a>
+    <a href="https://www.codeur.com/blog/freelances-entreprise-etude-2026/" target="_blank" rel="noopener">Baromètre freelance en entreprise 2026 (Codeur.com)</a> ·
+    <a href="https://bpifrance-creation.fr/entrepreneur/actualites/augmentation-auto-entrepreneurs-actifs-a-fin-2025" target="_blank" rel="noopener">Auto-entrepreneurs actifs fin 2025 (Bpifrance Création)</a> ·
+    <a href="https://www.culture.gouv.fr/espace-documentation/departement-des-etudes-de-la-prospective-des-statistiques-et-de-la-documentation-deps/publications/les-artistes-auteurs-en-2023-ce-2025-6" target="_blank" rel="noopener">Les artistes-auteurs en 2023 (DEPS)</a>
+  </p>
+</main>
+
+<main class="view" id="concurrence" data-title="La concurrence" data-cat="Le projet" hidden>
+  <header class="phead">
+    <div><p class="kicker"></p><h1>La concurrence</h1></div>
+    <p class="lead">Chaque brique de M&#8209;07 existe déjà quelque part, mais séparément. Aucune plateforme identifiée ne réunit le jeu vidéo, le paiement sécurisé et une place réservée aux débutants.</p>
+  </header>
+
+  <div class="shd"><h2>Le positionnement</h2><p>Indicatif, établi à partir des pages publiques des plateformes.</p></div>
+  <div class="pmap" role="img" aria-label="Carte de positionnement : M-07 est seule dans la zone jeu vidéo et ouverte aux débutants et étudiants.">
+    <div class="zone-me"><span>Jeu vidéo + débutants</span></div>
+    <span class="ax t">Ouvert aux débutants et étudiants</span>
+    <span class="ax b">Profils confirmés</span>
+    <span class="ax l">Généraliste</span>
+    <span class="ax r">Jeu vidéo</span>
+    <div class="pt me l" style="left:86%;top:20%"><i></i>M&#8209;07</div>
+    <div class="pt l" style="left:76%;top:40%"><i></i>Crewforge <em>(sans paiement)</em></div>
+    <div class="pt" style="left:12%;top:20%"><i></i>StaffMe, Student Pop <em>(hors jeu vidéo)</em></div>
+    <div class="pt l" style="left:88%;top:68%"><i></i>GameDev Freelance</div>
+    <div class="pt l" style="left:72%;top:82%"><i></i>UGCMarket</div>
+    <div class="pt" style="left:12%;top:62%"><i></i>Upwork</div>
+    <div class="pt" style="left:28%;top:76%"><i></i>Twine</div>
+    <div class="pt" style="left:10%;top:86%"><i></i>Malt, Freelancer.com</div>
+  </div>
+
+  <div class="sec">
+    <div class="shd"><h2>Le comparatif</h2><p>« Non trouvé » signifie absent des pages consultées, pas forcément inexistant.</p></div>
+    <p class="note mob-only" style="margin:0 0 12px">Faites glisser le tableau vers la gauche pour voir toutes les plateformes.</p>
+    <div class="mklegend"><span><span class="mk y"></span>Présent</span><span><span class="mk p"></span>Partiel</span><span><span class="mk n"></span>Non trouvé</span></div>
+    <div class="cmpt-wrap">
+      <table class="cmpt">
+        <thead><tr>
+          <th scope="col" style="text-align:left;padding-left:18px">Fonctionnalité</th>
+          <th scope="col" class="me">M&#8209;07<small>projet</small></th>
+          <th scope="col">GameDev Freelance<small>Royaume-Uni</small></th>
+          <th scope="col">UGCMarket<small>UGC jeux</small></th>
+          <th scope="col">Upwork<small>généraliste</small></th>
+          <th scope="col">Twine<small>créatif</small></th>
+          <th scope="col">Crewforge<small>équipes indé</small></th>
+          <th scope="col">StaffMe<small>étudiants</small></th>
+        </tr></thead>
+        <tbody>
+        <tr><th scope="row">Spécialisé jeu vidéo</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk p" role="img" aria-label="Partiel"></span><small>UGC Roblox, Fortnite</small></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk y" role="img" aria-label="Présent"></span><small>indé</small></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td></tr>
+        <tr><th scope="row">Paiement sécurisé par jalons</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk p" role="img" aria-label="Partiel"></span><small>séquestre global</small></td><td><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td></tr>
+        <tr><th scope="row">Missions réservées aux débutants</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk p" role="img" aria-label="Partiel"></span><small>étudiants, hors jeu vidéo</small></td></tr>
+        <tr><th scope="row">Mise en avant des nouveaux</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk p" role="img" aria-label="Partiel"></span><small>badge Rising Talent</small></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td></tr>
+        <tr><th scope="row">Niveau évalué par compétence</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk p" role="img" aria-label="Partiel"></span><small>badges globaux</small></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td></tr>
+        <tr><th scope="row">Recommandations par affinités</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td></tr>
+        <tr><th scope="row">Statuts français intégrés</th><td class="me"><span class="mk y" role="img" aria-label="Présent"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk n" role="img" aria-label="Non trouvé"></span></td><td><span class="mk p" role="img" aria-label="Partiel"></span><small>auto-entrepreneur seul</small></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sec split">
+    <div>
+      <div class="shd"><h2>Ce qui distingue M&#8209;07</h2></div>
+      <div class="vflow">
+        <div class="fbox" style="--c:var(--acc)"><span class="k">01</span><b>Une spécialisation jeu vidéo</b><span>Postes, compétences et livrables propres au jeu vidéo.</span></div>
+        <span class="arr down" style="--c:var(--acc)"></span>
+        <div class="fbox" style="--c:var(--green)"><span class="k">02</span><b>Une place réservée aux débutants et étudiants</b><span>Aucune plateforme identifiée ne ferme des missions aux pros.</span></div>
+        <span class="arr down" style="--c:var(--acc)"></span>
+        <div class="fbox" style="--c:var(--blue)"><span class="k">03</span><b>Le droit français intégré</b><span>Micro-entrepreneurs et artistes-auteurs, contrats et démarches simplifiés.</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="shd"><h2>Les risques</h2></div>
+      <div class="grid" style="gap:14px">
+        <div class="card line" style="--c:var(--coral)"><span class="k">Copie</span><h3>Chaque brique est copiable</h3><p>Une grande plateforme pourrait ajouter des missions réservées. L'avantage durable tient à la combinaison, à la communauté jeu vidéo et au droit français.</p></div>
+        <div class="card line" style="--c:var(--coral)"><span class="k">Veille</span><h3>Une recherche à refaire</h3><p>Un concurrent peu visible peut exister (start-up récente, service sur Discord). La veille est à refaire avant le lancement.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="src">Sources :
+    <a href="https://www.gamedevfreelance.com/" target="_blank" rel="noopener">GameDev Freelance</a> ·
+    <a href="https://ugcmarket.dev/" target="_blank" rel="noopener">UGCMarket</a> ·
+    <a href="https://support.upwork.com/hc/en-us/articles/17932660179475" target="_blank" rel="noopener">Upwork, badges</a> ·
+    <a href="https://www.twine.net/find/game-developers" target="_blank" rel="noopener">Twine</a> ·
+    <a href="https://www.freelancer.com/hire/game-development" target="_blank" rel="noopener">Freelancer.com</a> ·
+    <a href="https://www.crewforge.games/en" target="_blank" rel="noopener">Crewforge</a> ·
+    <a href="https://www.letudiant.fr/jobsstages/plateformes-de-jobs-etudiant-quels-avantages.html" target="_blank" rel="noopener">StaffMe et plateformes étudiantes (L'Étudiant)</a>
   </p>
 </main>
 
@@ -671,7 +818,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <div class="card"><span class="big">04</span><h3>Des niveaux prouvés</h3><p>Le niveau se prouve, puis ne progresse qu'avec des missions validées.</p></div>
     <div class="card"><span class="big">05</span><h3>Des recommandations par affinités</h3><p>L'IA relie projets et profils par leurs centres d'intérêt, sans trier.</p></div>
     <div class="card"><span class="big">06</span><h3>Un paiement sous séquestre</h3><p>Fonds bloqués au démarrage, libérés jalon par jalon.</p></div>
-    <div class="card"><span class="big">07</span><h3>Un contrat généré</h3><p>Chaque mission donne lieu à un contrat signé électroniquement.</p></div>
+    <div class="card"><span class="big">07</span><h3>Un contrat généré</h3><p>Un contrat signé électroniquement, adapté au statut : micro-entrepreneur ou artiste-auteur.</p></div>
     <div class="card"><span class="big">08</span><h3>Des notes et un contrôle</h3><p>Notes à l'aveugle, contrôle des livrables, sanctions en cas d'abus.</p></div>
   </div>
 </main>
@@ -1329,7 +1476,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   <div class="grid g3">
     <div class="card line" style="--c:var(--green)"><span class="k">Paiement</span><h3>La détention de fonds pour compte de tiers</h3><p>Une plateforme qui encaisse pour le compte de ses utilisateurs doit être agréée par l'ACPR, obtenir une exemption, ou passer par un prestataire de paiement agréé (Stripe Connect, Mangopay, Lemonway…). Le recours à un prestataire est la voie la plus simple au lancement.</p></div>
     <div class="card line" style="--c:var(--blue)"><span class="k">Fiscalité</span><h3>La directive DAC7</h3><p>La plateforme déclare chaque année à l'administration fiscale les revenus perçus par ses utilisateurs, et les en informe.</p></div>
-    <div class="card line" style="--c:var(--orange)"><span class="k">Statut</span><h3>Des contributeurs qui facturent</h3><p>Chaque contributeur doit disposer d'un statut lui permettant de facturer, le plus souvent la micro-entreprise, accessible aux étudiants. La plateforme accompagne cette étape à l'inscription.</p></div>
+    <div class="card line" style="--c:var(--orange)"><span class="k">Statut</span><h3>Deux statuts acceptés</h3><p>Micro-entrepreneur (facture de prestation) ou artiste-auteur (rémunération en droits d'auteur). Une activité couverte par le statut d'artiste-auteur ne peut pas être exercée en micro-entreprise. Un étudiant hors UE avec un titre de séjour étudiant ne peut pas créer de micro-entreprise. Rémunérer un artiste-auteur implique des obligations de diffuseur pour le payeur.</p></div>
     <div class="card line" style="--c:var(--acc)"><span class="k">Droits d'auteur</span><h3>Une cession écrite, livrable par livrable</h3><p>La cession doit être écrite et chaque droit cédé mentionné distinctement. La cession globale d'œuvres futures étant interdite, les droits sont cédés au fil des livrables validés.</p></div>
     <div class="card line" style="--c:var(--coral)"><span class="k">Indépendance</span><h3>L'absence de lien de subordination</h3><p>Pour écarter tout risque de requalification en salariat, les contributeurs choisissent leurs missions et organisent librement leur travail, sans horaires imposés.</p></div>
     <div class="card line" style="--c:#fff"><span class="k">Intelligence artificielle</span><h3>Des recommandations expliquées</h3><p>Le règlement européen sur l'IA classe à haut risque les usages liés au recrutement ; ces obligations s'appliquent à partir du 2 décembre 2027. Des affinités expliquées, sans note ni tri, et un choix laissé au porteur vont dans le bon sens.</p></div>
@@ -1341,7 +1488,10 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <a href="https://www.impots.gouv.fr/transfert-dinformations-en-application-des-dispositifs-dpi-dac7-plateformes-deconomie-collaborative" target="_blank" rel="noopener">DPI-DAC7 (impots.gouv.fr)</a> ·
     <a href="https://stripe.com/fr/resources/more/how-to-offer-secure-payments-on-marketplaces-in-france" target="_blank" rel="noopener">Paiements sur les marketplaces en France (Stripe)</a> ·
     <a href="https://www.artcena.fr/precis-juridique/droit-du-travail/embauche-et-contrats-de-travail/benevolat" target="_blank" rel="noopener">Lien de subordination (ARTCENA)</a> ·
-    <a href="https://donneespersonnelles.fr/omnibus-numerique-ia" target="_blank" rel="noopener">Report des obligations IA à haut risque</a>
+    <a href="https://donneespersonnelles.fr/omnibus-numerique-ia" target="_blank" rel="noopener">Report des obligations IA à haut risque</a> ·
+    <a href="https://propulsebyca.fr/micro-entrepreneur/artiste" target="_blank" rel="noopener">Artiste-auteur ou micro-entrepreneur</a> ·
+    <a href="https://www.legalstart.fr/fiches-pratiques/autoentrepreneur/cumul-etudiant-et-autoentrepreneur/" target="_blank" rel="noopener">Étudiant et micro-entreprise</a> ·
+    <a href="https://entreprendre.service-public.gouv.fr/vosdroits/F23749" target="_blank" rel="noopener">Artiste-auteur : affiliation (Service Public)</a>
   </p>
 </main>
 
@@ -1415,7 +1565,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   });
 
   /* ---------- Pages ---------- */
-  var order=['home','marche','demande','valeur','debutants','acteurs','fiche','cycle','profils','reco','jalons','garanties','abus','contrat','verification','cas','modele','legal','feuille'];
+  var order=['home','marche','demande','concurrence','valeur','debutants','acteurs','fiche','cycle','profils','reco','jalons','garanties','abus','contrat','verification','cas','modele','legal','feuille'];
   var total=order.length-1;
   var pad=function(n){return (n<10?'0':'')+n;};
   var views={};
