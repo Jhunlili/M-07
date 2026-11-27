@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Guilde · Concept</title>
+<meta name="description" content="Guilde : la plateforme où des fondateurs financent leur jeu vidéo et recrutent à la mission, du débutant au pro, avec un paiement sécurisé.">
+<!-- Même police que le portfolio : Acumin Variable si Adobe Fonts est chargé, sinon Roboto. -->
+<!-- <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font:"acumin-variable","Acumin Variable Concept","Acumin Pro","Roboto",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --pad:clamp(20px,3vw,40px);
+  --acc:#a77bff;      /* plateforme / accent de la page */
+  --blue:#4d93ff;     /* fondateurs */
+  --orange:#f0a030;   /* contributeurs */
+  --green:#3ecf8e;    /* argent */
+  --coral:#ff6b57;    /* litige */
+  --line:#2a2a2a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);font-weight:300;font-size:18px;line-height:1.6;background:#000;color:#fff;min-height:100vh;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.view{padding:var(--pad);padding-top:clamp(70px,9vw,110px)}
+.page{max-width:980px;margin:0 auto}
+.col{max-width:720px;margin-left:auto;margin-right:auto}
+
+/* ---------- Bouton fixe ---------- */
+.tocbtn{position:fixed;top:14px;right:var(--pad);z-index:60;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a;font-weight:400;border:1px solid #fff;padding:7px 14px;background:rgba(0,0,0,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.tocbtn:hover{color:#fff}
+
+/* ---------- En-tête ---------- */
+.hero{text-align:center}
+.page .hero p{text-align:center;hyphens:manual;-webkit-hyphens:manual}
+.kicker{font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:400;margin:0 auto 22px}
+.mtitle{font-weight:700;font-size:clamp(56px,11vw,128px);line-height:1;letter-spacing:-.03em;margin-bottom:14px}
+.meta{font-size:clamp(16px,1.8vw,19px);opacity:.65;margin-bottom:26px}
+.msub{font-size:clamp(20px,2.6vw,28px);opacity:.8;margin:0 auto 30px;max-width:760px;font-weight:300;line-height:1.45}
+.tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+.tag{display:inline-block;border:1px solid currentColor;padding:6px 16px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;font-weight:400;line-height:1.4}
+.prob{text-align:center;margin:clamp(50px,7vw,80px) auto 0;max-width:860px;padding-top:34px;position:relative}
+.prob::before{content:"";position:absolute;top:0;left:50%;width:60px;height:2px;background:var(--acc);transform:translateX(-50%)}
+.plabel{display:block;font-weight:700;font-size:clamp(14px,1.6vw,16px);letter-spacing:.14em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+.problematique{font-size:clamp(24px,3.4vw,38px);line-height:1.3;font-weight:300;letter-spacing:-.01em}
+
+/* ---------- Sommaire ---------- */
+.toc{margin-top:clamp(56px,8vw,90px)}
+.toc hr{border:0;border-top:1px solid #333;margin:0 0 18px}
+.toc .label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#777;font-weight:400;margin-bottom:10px}
+.toc nav{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.toc a{display:grid;grid-template-columns:52px 1fr;align-items:baseline;font-size:clamp(20px,2.4vw,26px);line-height:1.65;font-weight:300;letter-spacing:-.01em}
+.toc a .k{font-size:13px;letter-spacing:.14em;color:#777}
+.toc a:hover,.toc a:focus-visible{color:#ff2d2d;outline:none}
+.toc a:hover .k{color:#ff2d2d}
+
+/* ---------- Sections ---------- */
+section{padding-top:clamp(64px,9vw,110px)}
+.shead{max-width:720px;margin:0 auto 26px}
+.shead hr{border:0;border-top:1px solid #333;margin-bottom:22px}
+.shead .n{display:block;font-size:13px;letter-spacing:.14em;color:var(--acc);font-weight:700;margin-bottom:6px}
+.shead h2{font-weight:700;font-size:clamp(30px,4.6vw,50px);line-height:1.1;letter-spacing:-.015em}
+.page p{margin-bottom:14px;text-align:justify;text-justify:inter-word;line-height:1.55;hyphens:auto;-webkit-hyphens:auto}
+h3{font-weight:700;font-size:clamp(17px,2vw,20px);letter-spacing:.08em;text-transform:uppercase;margin:44px 0 14px}
+.note{font-size:15px;opacity:.6;margin-top:14px}
+ul.plain{list-style:none}
+ul.plain li{padding:4px 0 4px 24px;position:relative}
+ul.plain li::before{content:">";position:absolute;left:0;opacity:.6}
+
+/* Cartes (comme les compétences du portfolio) */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+.skills.three{grid-template-columns:repeat(3,1fr)}
+.skill{border:1px solid #fff;padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px}
+.skill .k{font-size:12px;letter-spacing:.14em;color:var(--c,var(--acc));font-weight:700}
+.skill strong{font-weight:700;font-size:19px;line-height:1.2}
+.skill span{font-size:15px;line-height:1.45;opacity:.78}
+
+/* ---------- Schéma : les acteurs ---------- */
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#aaa;margin:18px 0 22px}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:8px;background:var(--c);vertical-align:-1px}
+.eco{display:grid;grid-template-columns:1fr 150px 1fr 150px 1fr;align-items:stretch}
+.node{border:1px solid var(--c);padding:20px 20px 16px}
+.node .plabel{color:var(--c);margin-bottom:4px}
+.node .who{hyphens:manual;-webkit-hyphens:manual;font-size:15px;opacity:.7;margin-bottom:12px;line-height:1.4}
+.node ul.plain{font-size:15px}
+.node ul.plain li{padding:3px 0 3px 20px}
+.conn{display:flex;flex-direction:column;justify-content:center;gap:30px;padding:0 10px}
+.ar{position:relative;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#bbb;text-align:center;padding-bottom:10px;line-height:1.35}
+.ar::before{content:"";position:absolute;left:0;right:8px;bottom:0;height:1px;background:var(--c)}
+.ar::after{content:"";position:absolute;right:0;bottom:-4px;border-left:9px solid var(--c);border-top:4.5px solid transparent;border-bottom:4.5px solid transparent}
+.ar.l::before{left:8px;right:0}
+.ar.l::after{left:0;right:auto;border-left:0;border-right:9px solid var(--c)}
+
+/* ---------- Schéma : le cycle (arborescence du portfolio) ---------- */
+.branch{list-style:none;position:relative;padding-left:52px;margin-top:8px}
+.branch::before{content:"";position:absolute;left:11px;top:8px;bottom:0;width:1px;background:linear-gradient(#5a5a5a 88%,transparent)}
+.branch li{position:relative;margin:0 0 26px;--c:#777}
+.branch li::before{content:"";position:absolute;left:-36px;top:15px;width:36px;height:1px;background:var(--c)}
+.branch li::after{content:"";position:absolute;left:-48px;top:7px;width:16px;height:16px;border:2px solid var(--c);background:#000}
+.branch .bmeta{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-bottom:4px;font-weight:400}
+.branch strong{display:block;font-size:clamp(21px,2.4vw,26px);line-height:1.2;font-weight:700;margin-bottom:6px}
+.branch .d{display:block;font-size:16px;line-height:1.5;opacity:.82;max-width:640px}
+.c-blue{--c:var(--blue)!important}.c-orange{--c:var(--orange)!important}.c-acc{--c:var(--acc)!important}.c-green{--c:var(--green)!important}.c-coral{--c:var(--coral)!important}
+.perso{border:1px solid var(--c,var(--acc));padding:22px 24px 14px;margin:6px 0 0}
+.perso .plabel{color:var(--c,var(--acc));margin-bottom:10px}
+.perso ul.plain{font-size:16px}
+
+/* ---------- Profils ---------- */
+.profile{border:1px solid #fff;padding:22px 24px;margin-top:26px}
+.profile .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 20px;align-items:baseline;border-bottom:1px solid #333;padding-bottom:12px;margin-bottom:8px}
+.profile .top strong{font-size:22px;font-weight:700}
+.profile .top span{font-size:14px;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.srow{display:grid;grid-template-columns:1fr auto 130px;gap:14px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:17px}
+.srow:last-of-type{border-bottom:0}
+.lv{display:inline-flex;gap:5px}
+.lv i{display:block;width:14px;height:14px;border:1px solid var(--orange)}
+.lv i.on{background:var(--orange)}
+.srow .t{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#aaa;text-align:right}
+.srow.hi{color:#fff}.srow.hi .t{color:var(--orange)}
+.profile .why{font-size:15px;opacity:.75;margin-top:12px;line-height:1.5}
+
+.price{margin-top:22px}
+.price .ttl{font-size:15px;opacity:.75;margin-bottom:10px}
+.prow{display:grid;grid-template-columns:130px 1fr 70px;gap:14px;align-items:center;padding:7px 0;font-size:16px}
+.prow .bar{height:18px;background:var(--orange);opacity:var(--o,1)}
+.prow .v{text-align:right;font-weight:700}
+
+/* ---------- Jalons ---------- */
+.mission{border:1px solid #fff;padding:22px 24px;margin-top:22px}
+.mission .head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;margin-bottom:16px}
+.mission .head strong{font-size:20px;font-weight:700}
+.mission .head span{font-weight:700}
+.ms{display:flex;gap:4px}
+.ms > div{border:1px solid var(--c);padding:12px 12px 10px;font-size:14px;line-height:1.35;min-width:0}
+.ms .j{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);font-weight:700;margin-bottom:4px}
+.ms b{display:block;font-weight:700;font-size:16px}
+.ms .st{display:block;margin-top:6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.ms .done{background:rgba(62,207,142,.12)}
+.ms .todo{--c:#555}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.card{border-top:2px solid var(--c);padding:16px 2px 4px}
+.card .if{display:block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-bottom:6px;font-weight:400}
+.card strong{display:block;font-size:20px;line-height:1.25;font-weight:700;margin-bottom:6px}
+.card span{display:block;font-size:16px;line-height:1.5;opacity:.82}
+
+/* ---------- Protection ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.box{border:1px solid var(--c);padding:22px 24px 16px}
+.box .plabel{color:var(--c)}
+.box ul.plain{font-size:16px}
+.box ul.plain li{padding:5px 0 5px 22px}
+
+/* ---------- Contrat ---------- */
+.clauses{list-style:none;counter-reset:c;display:grid;grid-template-columns:1fr 1fr;column-gap:40px;margin-top:20px}
+.clauses li{counter-increment:c;display:grid;grid-template-columns:42px 1fr;padding:12px 0;border-top:1px solid var(--line)}
+.clauses li::before{content:counter(c,decimal-leading-zero);font-size:13px;letter-spacing:.14em;color:var(--acc);font-weight:700;padding-top:4px}
+.clauses b{display:block;font-weight:700}
+.clauses span{display:block;font-size:15px;opacity:.75;line-height:1.45}
+
+/* ---------- Budget ---------- */
+.stack{display:flex;height:46px;margin:22px 0 14px;border:1px solid #fff}
+.stack div{background:var(--c);height:100%}
+.slegend{display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.slegend div{display:grid;grid-template-columns:14px 1fr auto;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:16px}
+.slegend i{width:14px;height:14px;background:var(--c)}
+.slegend b{font-weight:700}
+.tl{list-style:none;margin-top:10px}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.tl li:last-child{border-bottom:1px solid var(--line)}
+.tl .d{opacity:.6;font-size:15px;padding-top:2px}
+.tl b{font-weight:700;display:block}
+.tl .s{opacity:.78;font-size:16px;display:block;line-height:1.5}
+
+/* ---------- Divers ---------- */
+.src{font-size:14px;opacity:.6;margin-top:18px;line-height:1.7}
+.src a{border-bottom:1px solid #555}
+.src a:hover{color:#fff;border-color:#fff;opacity:1}
+footer.foot{margin-top:90px;padding-top:22px;border-top:1px solid #333;font-size:13px;color:#777;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
+
+/* ---------- Mobile ---------- */
+@media(max-width:860px){
+  .skills,.skills.three{grid-template-columns:repeat(2,1fr)}
+  .eco{grid-template-columns:1fr}
+  .conn{flex-direction:row;justify-content:center;gap:34px;padding:14px 0;height:110px}
+  .ar{padding:0 14px 0 0;text-align:left;display:flex;align-items:center;max-width:130px;height:100%}
+  .ar::before{left:auto;right:0;top:0;bottom:9px;width:1px;height:auto}
+  .ar::after{right:-4px;bottom:0;border-top:9px solid var(--c);border-left:4.5px solid transparent;border-right:4.5px solid transparent;border-bottom:0}
+  .ar.l::before{left:auto;right:0;top:9px;bottom:0}
+  .ar.l::after{left:auto;right:-4px;top:0;bottom:auto;border-bottom:9px solid var(--c);border-top:0;border-right:4.5px solid transparent;border-left:4.5px solid transparent}
+  .cards,.two,.clauses,.slegend,.toc nav{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  body{font-size:17px}
+  .skills,.skills.three{grid-template-columns:1fr}
+  .tl li{grid-template-columns:1fr;gap:2px}
+  .srow{grid-template-columns:1fr auto;row-gap:2px}
+  .srow .t{grid-column:1/-1;text-align:left}
+  .prow{grid-template-columns:96px 1fr 56px;gap:10px;font-size:15px}
+  .ms > div{padding:10px 8px 8px;font-size:13px}
+  .ms b{font-size:14px}
+  .ms .dot{display:none}.ms .pc{display:block}
+  .ms .st{font-size:11px;letter-spacing:.06em}
+  .tag{font-size:12px;padding:5px 12px}
+  .tocbtn{font-size:12px;padding:6px 10px}
+}
+</style>
+</head>
+<body>
+
+<a class="tocbtn" href="#sommaire">Sommaire ↑</a>
+
+<main class="view">
+<div class="page">
+
+  <!-- ================= EN-TÊTE ================= -->
+  <header class="hero">
+    <p class="kicker">Concept · document de travail · novembre 2026</p>
+    <h1 class="mtitle">Guilde</h1>
+    <p class="meta">Nom provisoire · un concept de Lydia Abid</p>
+    <p class="msub">La plateforme où des fondateurs financent leur jeu vidéo et recrutent à la mission, du débutant au pro, avec un paiement qui ne se débloque que lorsque les deux parties sont satisfaites.</p>
+    <div class="tags">
+      <span class="tag">Jeu vidéo</span>
+      <span class="tag">Missions payées</span>
+      <span class="tag">Débutant → Pro</span>
+      <span class="tag">Paiement sécurisé</span>
+      <span class="tag">Contrats automatiques</span>
+    </div>
+  </header>
+
+  <div class="prob">
+    <span class="plabel">En une phrase</span>
+    <p class="problematique" style="text-align:center;hyphens:manual">Un studio en ligne : les fondateurs apportent l'idée et le budget, la plateforme apporte les talents, les contrats et la sécurité du paiement.</p>
+  </div>
+
+  <!-- ================= SOMMAIRE ================= -->
+  <div class="toc" id="sommaire">
+    <hr>
+    <div class="label">Sommaire</div>
+    <nav aria-label="Sommaire">
+      <a href="#constat"><span class="k">01</span><span>Le constat</span></a>
+      <a href="#solution"><span class="k">02</span><span>La solution</span></a>
+      <a href="#acteurs"><span class="k">03</span><span>Les acteurs</span></a>
+      <a href="#cycle"><span class="k">04</span><span>Le cycle d'une mission</span></a>
+      <a href="#profils"><span class="k">05</span><span>Les profils par compétence</span></a>
+      <a href="#jalons"><span class="k">06</span><span>Le paiement par jalons</span></a>
+      <a href="#protection"><span class="k">07</span><span>La protection des deux côtés</span></a>
+      <a href="#contrat"><span class="k">08</span><span>Le contrat généré</span></a>
+      <a href="#verification"><span class="k">09</span><span>La vérification</span></a>
+      <a href="#exemple"><span class="k">10</span><span>Un exemple concret</span></a>
+      <a href="#modele"><span class="k">11</span><span>Le modèle économique</span></a>
+      <a href="#legal"><span class="k">12</span><span>Le cadre légal</span></a>
+      <a href="#etapes"><span class="k">13</span><span>Les prochaines étapes</span></a>
+    </nav>
+  </div>
+
+  <!-- ================= 01 CONSTAT ================= -->
+  <section id="constat">
+    <div class="shead"><hr><span class="n">01</span><h2>Le constat</h2></div>
+    <div class="col">
+      <p>Beaucoup de jeux indépendants naissent de la même façon : quelques amis, une idée, un peu d'argent mis en commun. Très vite, il manque des compétences. Il faut un développeur gameplay, un artiste 3D, quelqu'un qui maîtrise le rigging. C'est à ce moment-là que tout se complique, pour ceux qui cherchent du renfort comme pour ceux qui pourraient l'apporter.</p>
+    </div>
+    <div class="skills">
+      <div class="skill" style="--c:var(--blue)"><span class="k">Les fondateurs</span><strong>Recruter est éparpillé</strong><span>Discord, forums, plateformes de freelance généralistes : rien n'est pensé pour le jeu vidéo, et payer quelqu'un sans garantie de résultat reste un risque.</span></div>
+      <div class="skill" style="--c:var(--orange)"><span class="k">Les freelances</span><strong>Travailler sans filet</strong><span>Sur les petits projets, on travaille souvent sans contrat. On risque de livrer sans être payé, ou de voir la mission s'étendre sans fin.</span></div>
+      <div class="skill" style="--c:var(--green)"><span class="k">Les débutants</span><strong>Pas de première chance</strong><span>Un étudiant maîtrise parfois une compétence précise, comme le dépliage UV, mais on lui demande une expérience qu'il ne peut pas acquérir.</span></div>
+      <div class="skill" style="--c:var(--coral)"><span class="k">Le rev-share</span><strong>« On partagera plus tard »</strong><span>Payer sur les futures ventes reste la solution par défaut. Sans écrit ni suivi, elle mène souvent à des conflits et à des projets abandonnés.</span></div>
+    </div>
+  </section>
+
+  <!-- ================= 02 SOLUTION ================= -->
+  <section id="solution">
+    <div class="shead"><hr><span class="n">02</span><h2>La solution</h2></div>
+    <div class="col">
+      <p>Guilde réunit sur un seul site tout ce qu'il faut pour faire avancer un projet de jeu avec du renfort extérieur : le budget, les missions, les talents, les contrats et le paiement. Le principe est simple : on ne paie pas des heures, on paie des missions précises, vérifiées et validées.</p>
+    </div>
+    <div class="skills three">
+      <div class="skill"><span class="k">01</span><strong>L'espace projet</strong><span>Les fondateurs créent leur projet et versent leur budget dans une cagnotte. Missions, fichiers, échanges et budget restant sont réunis au même endroit.</span></div>
+      <div class="skill"><span class="k">02</span><strong>Des missions ciblées</strong><span>Le projet est découpé en missions : corriger un bug, modéliser un personnage, déplier des UV. Chacune a ses livrables, ses critères et son prix.</span></div>
+      <div class="skill"><span class="k">03</span><strong>Des profils par compétence</strong><span>Chaque profil est un arbre de compétences. On peut être intermédiaire en UV et débutant en modélisation, et être commissionné sur ce qu'on sait faire.</span></div>
+      <div class="skill"><span class="k">04</span><strong>Un paiement bloqué</strong><span>L'argent est déposé avant le début du travail et ne se débloque qu'après validation des deux parties, jalon par jalon.</span></div>
+      <div class="skill"><span class="k">05</span><strong>Un contrat automatique</strong><span>À chaque mission acceptée, la plateforme génère le contrat : livrables, prix, délais, retouches, cession des droits, conditions de sortie.</span></div>
+      <div class="skill"><span class="k">06</span><strong>Vérification et arbitrage</strong><span>Un agent de la plateforme contrôle les livrables et tranche en cas de désaccord, à partir des critères écrits au départ.</span></div>
+    </div>
+  </section>
+
+  <!-- ================= 03 ACTEURS ================= -->
+  <section id="acteurs">
+    <div class="shead"><hr><span class="n">03</span><h2>Les acteurs</h2></div>
+    <div class="col">
+      <p>Trois acteurs, et une plateforme au centre qui joue le rôle de tiers de confiance : elle garde l'argent, rédige les contrats et vérifie le travail. Les fondateurs et les contributeurs n'ont jamais à se faire confiance « sur parole ».</p>
+    </div>
+    <div class="legend">
+      <span><i style="--c:var(--blue)"></i>Fondateurs</span>
+      <span><i style="--c:var(--acc)"></i>Plateforme</span>
+      <span><i style="--c:var(--orange)"></i>Contributeurs</span>
+      <span><i style="--c:var(--green)"></i>Argent</span>
+    </div>
+    <div class="eco" role="img" aria-label="Schéma : les fondateurs déposent le budget et publient les missions sur la plateforme ; la plateforme transmet missions et contrats aux contributeurs ; les contributeurs livrent ; la plateforme verse le paiement et transmet les livrables validés et les droits aux fondateurs.">
+      <div class="node" style="--c:var(--blue)">
+        <span class="plabel">Fondateurs</span>
+        <p class="who" style="text-align:left">2 à 5 personnes qui portent le projet et le financent.</p>
+        <ul class="plain">
+          <li>Créent le projet</li>
+          <li>Versent le budget</li>
+          <li>Publient les missions</li>
+          <li>Valident les livrables</li>
+        </ul>
+      </div>
+      <div class="conn">
+        <div class="ar" style="--c:var(--blue)">Budget et missions</div>
+        <div class="ar l" style="--c:var(--acc)">Livrables validés et droits</div>
+      </div>
+      <div class="node" style="--c:var(--acc)">
+        <span class="plabel">La plateforme</span>
+        <p class="who" style="text-align:left">Le tiers de confiance entre les deux.</p>
+        <ul class="plain">
+          <li>Cagnotte bloquée</li>
+          <li>Contrats générés</li>
+          <li>Agent de vérification</li>
+          <li>Arbitrage des litiges</li>
+        </ul>
+      </div>
+      <div class="conn">
+        <div class="ar" style="--c:var(--acc)">Missions et contrat</div>
+        <div class="ar l" style="--c:var(--orange)">Livrables</div>
+        <div class="ar" style="--c:var(--green)">Paiement</div>
+      </div>
+      <div class="node" style="--c:var(--orange)">
+        <span class="plabel">Contributeurs</span>
+        <p class="who" style="text-align:left">Pros, intermédiaires et débutants, étudiants ou indépendants.</p>
+        <ul class="plain">
+          <li>Postulent aux missions</li>
+          <li>Réalisent par jalons</li>
+          <li>Livrent leur travail</li>
+          <li>Sont payés à la validation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 CYCLE ================= -->
+  <section id="cycle">
+    <div class="shead"><hr><span class="n">04</span><h2>Le cycle d'une mission</h2></div>
+    <div class="col">
+      <p>De la publication au paiement, chaque mission suit le même parcours en huit étapes. La couleur indique qui agit.</p>
+      <div class="legend">
+        <span><i style="--c:var(--blue)"></i>Fondateurs</span>
+        <span><i style="--c:var(--orange)"></i>Contributeur</span>
+        <span><i style="--c:var(--acc)"></i>Plateforme</span>
+        <span><i style="--c:var(--green)"></i>Argent</span>
+      </div>
+      <ul class="branch">
+        <li class="c-blue"><span class="bmeta">01 · Fondateurs</span><strong>Publication</strong><span class="d">Les fondateurs décrivent la mission : livrables attendus, critères de validation, délai et niveau requis. La plateforme propose un prix selon sa grille.</span></li>
+        <li class="c-orange"><span class="bmeta">02 · Contributeurs</span><strong>Candidatures</strong><span class="d">Les profils qui ont le bon niveau sur la compétence demandée postulent. Les fondateurs comparent portfolios, notes et missions passées.</span></li>
+        <li class="c-acc"><span class="bmeta">03 · Plateforme</span><strong>Contrat</strong><span class="d">Dès qu'un profil est retenu, le contrat est généré et signé en ligne par les deux parties.</span></li>
+        <li class="c-green"><span class="bmeta">04 · Argent</span><strong>Dépôt bloqué</strong><span class="d">Le montant de la mission est pris dans la cagnotte du projet et bloqué. Le contributeur sait que l'argent existe avant de commencer.</span></li>
+        <li class="c-orange"><span class="bmeta">05 · Contributeur</span><strong>Réalisation par jalons</strong><span class="d">Le travail avance jalon par jalon. Chaque jalon est livré, vérifié et payé séparément.</span></li>
+        <li class="c-acc"><span class="bmeta">06 · Plateforme</span><strong>Vérification</strong><span class="d">L'agent de la plateforme contrôle le livrable au regard des critères écrits au départ.</span></li>
+        <li class="c-blue"><span class="bmeta">07 · Les deux parties</span><strong>Double validation</strong><span class="d">Les fondateurs valident le livrable et le contributeur confirme la clôture du jalon.</span></li>
+        <li class="c-green"><span class="bmeta">08 · Argent</span><strong>Paiement et cession des droits</strong><span class="d">L'argent du jalon est versé au contributeur. Les droits sur ce livrable passent au projet.</span></li>
+      </ul>
+      <div class="perso" style="--c:var(--coral)">
+        <span class="plabel">Et si ça bloque à l'étape 07 ?</span>
+        <ul class="plain">
+          <li>Le contrat fixe un nombre de retouches incluses : au-delà, c'est une nouvelle mission.</li>
+          <li>Sans réponse des fondateurs sous X jours, le jalon livré est validé automatiquement.</li>
+          <li>En cas de désaccord, la plateforme arbitre à partir du contrat et des critères.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 05 PROFILS ================= -->
+  <section id="profils">
+    <div class="shead"><hr><span class="n">05</span><h2>Les profils par compétence</h2></div>
+    <div class="col">
+      <p>Un profil n'est pas un métier, c'est un arbre de compétences. Le niveau se gagne compétence par compétence, mission après mission. Ainsi, un débutant peut déjà être payé sur ce qu'il maîtrise, et progresser sur le reste.</p>
+    </div>
+    <div class="skills three">
+      <div class="skill" style="--c:var(--green)"><span class="k">■□□</span><strong>Débutant</strong><span>Étudiants et autodidactes. Missions courtes, souvent encadrées par un pro du projet. Pour apprendre, se faire un portfolio et gagner ses premiers revenus.</span></div>
+      <div class="skill" style="--c:var(--orange)"><span class="k">■■□</span><strong>Intermédiaire</strong><span>Plusieurs missions validées sur la compétence, avec de bonnes notes. Missions plus longues, réalisées en autonomie.</span></div>
+      <div class="skill" style="--c:var(--acc)"><span class="k">■■■</span><strong>Pro</strong><span>Expérience vérifiée (studio, portfolio solide) ou nombreuses missions réussies. Missions complexes et encadrement des débutants.</span></div>
+    </div>
+
+    <div class="col">
+      <div class="profile">
+        <div class="top"><strong>Inès</strong><span>Profil exemple · étudiante en 3D</span></div>
+        <div class="srow hi"><span>Dépliage UV</span><span class="lv"><i class="on"></i><i class="on"></i><i></i></span><span class="t">Intermédiaire</span></div>
+        <div class="srow"><span>Modélisation low poly</span><span class="lv"><i class="on"></i><i></i><i></i></span><span class="t">Débutant</span></div>
+        <div class="srow"><span>Texturing</span><span class="lv"><i class="on"></i><i></i><i></i></span><span class="t">Débutant</span></div>
+        <div class="srow"><span>Rigging</span><span class="lv"><i></i><i></i><i></i></span><span class="t">Non renseigné</span></div>
+        <p class="why" style="text-align:left">Inès peut être commissionnée au tarif intermédiaire sur une mission de dépliage UV, même si elle débute en modélisation.</p>
+      </div>
+
+      <div class="price">
+        <h3>Le prix suit le niveau</h3>
+        <p class="ttl" style="text-align:left">Exemple : mission « Dépliage UV d'un personnage », prix de base 100&nbsp;€ (chiffres fictifs, à calibrer avec le marché).</p>
+        <div class="prow"><span>Débutant</span><div class="bar" style="width:33%;--o:.45"></div><span class="v">60&nbsp;€</span></div>
+        <div class="prow"><span>Intermédiaire</span><div class="bar" style="width:56%;--o:.75"></div><span class="v">100&nbsp;€</span></div>
+        <div class="prow"><span>Pro</span><div class="bar" style="width:100%"></div><span class="v">180&nbsp;€</span></div>
+        <p class="note" style="text-align:left">Mission validée et bien notée → points sur la compétence → passage au niveau supérieur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 JALONS ================= -->
+  <section id="jalons">
+    <div class="shead"><hr><span class="n">06</span><h2>Le paiement par jalons</h2></div>
+    <div class="col">
+      <p>C'est ce qui permet de quitter un projet sans perdre son argent. Chaque mission est découpée en jalons, payés séparément. Ce qui a été validé est acquis, quoi qu'il arrive ensuite.</p>
+      <div class="mission">
+        <div class="head"><strong>Modéliser un personnage jouable</strong><span>600&nbsp;€</span></div>
+        <div class="ms">
+          <div class="done" style="flex:0 0 calc(30% - 3px);--c:var(--green)"><span class="j">Jalon 1<span class="dot"> · </span><span class="pc">30&nbsp;%</span></span><b>Ébauche</b>180&nbsp;€<span class="st">Validé · payé</span></div>
+          <div style="flex:0 0 calc(40% - 2px);--c:var(--acc)"><span class="j">Jalon 2<span class="dot"> · </span><span class="pc">40&nbsp;%</span></span><b>Modèle final</b>240&nbsp;€<span class="st">En cours · bloqué</span></div>
+          <div class="todo" style="flex:1"><span class="j">Jalon 3<span class="dot"> · </span><span class="pc">30&nbsp;%</span></span><b>Textures</b>180&nbsp;€<span class="st">À venir · bloqué</span></div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="card" style="--c:var(--orange)"><span class="if">Si le contributeur doit partir</span><strong>Il garde ce qui est validé</strong><span>L'argent des jalons validés lui reste acquis. Le reste retourne dans la cagnotte et la mission peut être republiée.</span></div>
+        <div class="card" style="--c:var(--blue)"><span class="if">Si les fondateurs arrêtent</span><strong>Le travail livré est payé</strong><span>Tout jalon livré est payé. Le jalon en cours est évalué par la plateforme et payé au prorata du travail rendu.</span></div>
+        <div class="card" style="--c:var(--acc)"><span class="if">Si les fondateurs ne répondent plus</span><strong>Validation automatique</strong><span>Un jalon livré sans réponse sous X jours est validé automatiquement : personne ne peut bloquer l'argent indéfiniment.</span></div>
+        <div class="card" style="--c:var(--coral)"><span class="if">S'il y a désaccord</span><strong>Arbitrage</strong><span>Les retouches prévues au contrat sont d'abord utilisées, puis la plateforme tranche à partir des critères écrits.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 PROTECTION ================= -->
+  <section id="protection">
+    <div class="shead"><hr><span class="n">07</span><h2>La protection des deux côtés</h2></div>
+    <div class="col">
+      <p>Le site ne protège pas un camp contre l'autre : il rend la collaboration sûre pour tout le monde. Les fondateurs gardent leur jeu, les contributeurs sont payés pour leur travail.</p>
+    </div>
+    <div class="two">
+      <div class="box" style="--c:var(--blue)">
+        <span class="plabel">Pour les créateurs</span>
+        <ul class="plain">
+          <li>Un accord de confidentialité signé avec chaque contributeur.</li>
+          <li>Un accès limité aux seuls fichiers de la mission.</li>
+          <li>Les droits sur chaque livrable cédés au projet au moment du paiement.</li>
+          <li>L'argent rendu à la cagnotte si la mission n'est pas livrée.</li>
+          <li>Un historique complet de chaque mission, utile en cas de litige.</li>
+        </ul>
+      </div>
+      <div class="box" style="--c:var(--orange)">
+        <span class="plabel">Pour les devs et artistes</span>
+        <ul class="plain">
+          <li>L'argent déposé avant le début du travail.</li>
+          <li>Un périmètre écrit : toute demande en plus devient une nouvelle mission payée.</li>
+          <li>Un nombre de retouches limité, et une validation automatique sans réponse.</li>
+          <li>Le droit de montrer son travail dans son portfolio à la sortie du jeu.</li>
+          <li>Une note et un niveau qui le suivent d'un projet à l'autre.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 08 CONTRAT ================= -->
+  <section id="contrat">
+    <div class="shead"><hr><span class="n">08</span><h2>Le contrat généré</h2></div>
+    <div class="col">
+      <p>Le contrat est le cœur du site. Il est rempli automatiquement à partir de la fiche mission, puis signé en ligne par les deux parties. Personne n'a à le rédiger, et rien n'est laissé à l'oral.</p>
+    </div>
+    <ol class="clauses">
+      <li><div><b>Les parties</b><span>Le projet, ses fondateurs, le contributeur et son statut.</span></div></li>
+      <li><div><b>La mission</b><span>Livrables, formats de fichiers, critères de validation.</span></div></li>
+      <li><div><b>Le prix et les jalons</b><span>Montant total, découpage, montant de chaque jalon.</span></div></li>
+      <li><div><b>Les délais</b><span>Date de chaque jalon, délai de réponse des fondateurs.</span></div></li>
+      <li><div><b>Les retouches</b><span>Nombre de retouches incluses avant arbitrage.</span></div></li>
+      <li><div><b>La cession des droits</b><span>Chaque droit cédé listé à part, avec son étendue, sa destination, son lieu et sa durée.</span></div></li>
+      <li><div><b>La confidentialité</b><span>Ce que le contributeur peut ou non montrer, et jusqu'à quand.</span></div></li>
+      <li><div><b>Le portfolio</b><span>Droit de montrer son travail à partir de la sortie du jeu.</span></div></li>
+      <li><div><b>La sortie anticipée</b><span>Ce qui est payé et ce qui retourne à la cagnotte.</span></div></li>
+      <li><div><b>Le litige</b><span>Retouches, puis arbitrage par la plateforme.</span></div></li>
+    </ol>
+    <p class="note col" style="text-align:left;margin-top:20px">Les modèles de contrat devront être rédigés et validés par un avocat en propriété intellectuelle et en droit des plateformes.</p>
+  </section>
+
+  <!-- ================= 09 VÉRIFICATION ================= -->
+  <section id="verification">
+    <div class="shead"><hr><span class="n">09</span><h2>La vérification</h2></div>
+    <div class="col">
+      <p>L'agent de vérification garantit que le paiement correspond à un travail conforme. La proposition retenue pour l'instant combine deux niveaux : une vérification automatique rapide, puis un regard humain quand c'est nécessaire.</p>
+    </div>
+    <div class="two">
+      <div class="box" style="--c:var(--acc)">
+        <span class="plabel">Niveau 1 · automatique</span>
+        <ul class="plain">
+          <li>Les bons fichiers, au bon format, au complet.</li>
+          <li>Les contrôles techniques : nombre de polygones, UV sans chevauchement, projet qui compile, tests qui passent.</li>
+          <li>La comparaison avec les critères de la fiche mission.</li>
+        </ul>
+      </div>
+      <div class="box" style="--c:#fff">
+        <span class="plabel">Niveau 2 · humain</span>
+        <ul class="plain">
+          <li>La qualité artistique et la cohérence avec la direction artistique du jeu.</li>
+          <li>Les litiges entre fondateurs et contributeurs.</li>
+          <li>Les cas que la vérification automatique ne sait pas trancher.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note col" style="text-align:left;margin-top:20px">Une IA est rapide et peu coûteuse, mais elle juge mal la qualité artistique : c'est pourquoi le second niveau reste humain.</p>
+  </section>
+
+  <!-- ================= 10 EXEMPLE ================= -->
+  <section id="exemple">
+    <div class="shead"><hr><span class="n">10</span><h2>Un exemple concret</h2></div>
+    <div class="col">
+      <p>Trois amis veulent créer un RPG tactique. Ils ont l'idée, le game design et 15&nbsp;000&nbsp;€ à eux trois, mais pas assez de compétences en développement ni en 3D. Voici comment Guilde leur permet d'avancer. L'exemple est fictif.</p>
+
+      <h3>Le budget</h3>
+      <div class="stack" role="img" aria-label="Répartition du budget de 15 000 euros">
+        <div style="width:40%;--c:var(--blue)"></div>
+        <div style="width:30%;--c:var(--orange)"></div>
+        <div style="width:6%;--c:var(--green)"></div>
+        <div style="width:2%;--c:#fff"></div>
+        <div style="width:8%;--c:var(--acc)"></div>
+        <div style="width:14%;--c:#333"></div>
+      </div>
+      <div class="slegend">
+        <div style="--c:var(--blue)"><i></i><span>2 devs gameplay · intermédiaires</span><b>6&nbsp;000&nbsp;€</b></div>
+        <div style="--c:var(--orange)"><i></i><span>Artiste 3D personnages · pro</span><b>4&nbsp;500&nbsp;€</b></div>
+        <div style="--c:var(--green)"><i></i><span>Dépliage UV · 2 débutants encadrés</span><b>900&nbsp;€</b></div>
+        <div style="--c:#fff"><i></i><span>Encadrement par l'artiste pro</span><b>300&nbsp;€</b></div>
+        <div style="--c:var(--acc)"><i></i><span>Commission de la plateforme</span><b>1&nbsp;200&nbsp;€</b></div>
+        <div style="--c:#333"><i></i><span>Réserve</span><b>2&nbsp;100&nbsp;€</b></div>
+      </div>
+
+      <h3>Le déroulé</h3>
+      <ul class="tl">
+        <li><div class="d">Semaine 1</div><div><b>Création du projet</b><span class="s">Les trois fondateurs créent l'espace projet et versent 5&nbsp;000&nbsp;€ chacun. La part de chacun est enregistrée.</span></div></li>
+        <li><div class="d">Semaine 2</div><div><b>Publication des missions</b><span class="s">Cinq missions sont publiées. Les candidatures arrivent, filtrées par compétence et par niveau.</span></div></li>
+        <li><div class="d">Semaine 3</div><div><b>Contrats signés</b><span class="s">Les profils sont choisis, les contrats générés et signés, l'argent de chaque mission bloqué.</span></div></li>
+        <li><div class="d">Mois 2 à 4</div><div><b>Production</b><span class="s">Les jalons sont livrés, vérifiés et payés au fil de l'eau. Les débutants en UV sont relus par l'artiste pro.</span></div></li>
+        <li><div class="d">Mois 3</div><div><b>Un départ, sans drame</b><span class="s">Un des devs doit partir. Il garde ses deux jalons validés, la suite de sa mission est republiée avec le budget restant.</span></div></li>
+        <li><div class="d">Mois 5</div><div><b>Démo jouable</b><span class="s">Les fondateurs ont une démo pour chercher un éditeur ou lancer un financement participatif. Les deux débutants passent intermédiaires en UV.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= 11 MODÈLE ================= -->
+  <section id="modele">
+    <div class="shead"><hr><span class="n">11</span><h2>Le modèle économique</h2></div>
+    <div class="col">
+      <p>La plateforme gagne de l'argent quand les missions se réalisent : elle a donc intérêt à ce que les projets avancent. Plusieurs pistes sont possibles, à tester.</p>
+    </div>
+    <div class="skills">
+      <div class="skill"><span class="k">Principal</span><strong>Commission</strong><span>Un pourcentage sur chaque mission payée, côté fondateurs, côté contributeurs ou partagé.</span></div>
+      <div class="skill"><span class="k">Option</span><strong>Abonnement studio</strong><span>Outils avancés : plusieurs projets, statistiques, stockage de fichiers plus important.</span></div>
+      <div class="skill"><span class="k">Option</span><strong>Mise en avant</strong><span>Missions ou profils mis en avant, pour recruter ou être repéré plus vite.</span></div>
+      <div class="skill"><span class="k">Option</span><strong>Écoles</strong><span>Parcours de missions encadrées pour les étudiants, en partenariat avec des écoles de jeu vidéo.</span></div>
+    </div>
+  </section>
+
+  <!-- ================= 12 LÉGAL ================= -->
+  <section id="legal">
+    <div class="shead"><hr><span class="n">12</span><h2>Le cadre légal</h2></div>
+    <div class="col">
+      <p>Plusieurs règles françaises et européennes encadrent ce type de plateforme. Elles ne bloquent pas le concept, mais elles doivent être intégrées dès sa conception.</p>
+      <ul class="tl">
+        <li><div class="d">Paiement</div><div><b>Garder l'argent des autres</b><span class="s">Une plateforme qui encaisse pour le compte de ses utilisateurs doit être agréée par l'ACPR, obtenir une exemption, ou passer par un prestataire de paiement agréé (Stripe Connect, Mangopay, Lemonway…). Passer par un prestataire est la solution la plus simple au départ.</span></div></li>
+        <li><div class="d">Fiscalité</div><div><b>La directive DAC7</b><span class="s">La plateforme déclare chaque année à l'administration fiscale les revenus perçus par ses utilisateurs, et les en informe.</span></div></li>
+        <li><div class="d">Statut</div><div><b>Des contributeurs qui facturent</b><span class="s">Chaque contributeur doit avoir un statut pour être payé, souvent la micro-entreprise, accessible aux étudiants. La plateforme guide cette étape à l'inscription.</span></div></li>
+        <li><div class="d">Droits d'auteur</div><div><b>Une cession écrite, livrable par livrable</b><span class="s">La cession doit être écrite et chaque droit cédé mentionné à part. La cession globale d'œuvres futures étant interdite, les droits sont cédés au fil des livrables validés.</span></div></li>
+        <li><div class="d">Indépendance</div><div><b>Pas de lien de subordination</b><span class="s">Pour éviter une requalification en salariat, les contributeurs choisissent leurs missions et s'organisent librement, sans horaires imposés.</span></div></li>
+      </ul>
+      <p class="note" style="text-align:left">Ce document n'est pas un avis juridique : chaque point est à valider avec un avocat.</p>
+      <p class="src" style="text-align:left">Sources :
+        <a href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006278969/2026-04-19" target="_blank" rel="noopener">Code de la propriété intellectuelle (Légifrance)</a> ·
+        <a href="https://www.artcena.fr/artcena-juridique/droits-dauteurs-et-droits-voisins/droit-dauteur/cession-des-droits-dauteur" target="_blank" rel="noopener">Cession des droits d'auteur (ARTCENA)</a> ·
+        <a href="https://www.impots.gouv.fr/transfert-dinformations-en-application-des-dispositifs-dpi-dac7-plateformes-deconomie-collaborative" target="_blank" rel="noopener">DPI-DAC7 (impots.gouv.fr)</a> ·
+        <a href="https://stripe.com/fr/resources/more/how-to-offer-secure-payments-on-marketplaces-in-france" target="_blank" rel="noopener">Paiements sur les marketplaces en France (Stripe)</a> ·
+        <a href="https://www.artcena.fr/precis-juridique/droit-du-travail/embauche-et-contrats-de-travail/benevolat" target="_blank" rel="noopener">Lien de subordination (ARTCENA)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= 13 ÉTAPES ================= -->
+  <section id="etapes">
+    <div class="shead"><hr><span class="n">13</span><h2>Les prochaines étapes</h2></div>
+    <div class="col">
+      <ul class="branch">
+        <li class="c-acc"><span class="bmeta">Étape 1</span><strong>Valider le besoin</strong><span class="d">Interroger une dizaine de fondateurs de petits projets et une dizaine de freelances et d'étudiants sur leurs difficultés réelles.</span></li>
+        <li class="c-acc"><span class="bmeta">Étape 2</span><strong>Maquetter</strong><span class="d">Dessiner les écrans clés : l'espace projet, la fiche mission, le profil par compétence, le suivi des paiements.</span></li>
+        <li class="c-acc"><span class="bmeta">Étape 3</span><strong>Poser le cadre juridique</strong><span class="d">Faire rédiger les modèles de contrat par un avocat et choisir le prestataire de paiement.</span></li>
+        <li class="c-acc"><span class="bmeta">Étape 4</span><strong>Construire une première version</strong><span class="d">Projet, missions, paiement bloqué et double validation. La vérification reste humaine au départ, l'automatique viendra ensuite.</span></li>
+        <li class="c-acc"><span class="bmeta">Étape 5</span><strong>Lancer un projet pilote</strong><span class="d">Un vrai petit projet de jeu, quelques vraies missions, puis ajuster à partir des retours.</span></li>
+      </ul>
+
+      <div class="perso" style="--c:var(--orange);margin-top:30px">
+        <span class="plabel">Questions encore ouvertes</span>
+        <ul class="plain">
+          <li>Le nom définitif de la plateforme.</li>
+          <li>L'agent de vérification : IA, humain, ou les deux.</li>
+          <li>Une grille de prix imposée, ou une fourchette libre.</li>
+          <li>La France d'abord, ou l'international dès le départ.</li>
+          <li>Le taux de commission, et qui le paie.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>Guilde · concept de Lydia Abid</span>
+    <span>Document de travail · novembre 2026</span>
+  </footer>
+
+</div>
+</main>
+</body>
+</html>
