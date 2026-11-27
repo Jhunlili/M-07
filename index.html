@@ -496,6 +496,21 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
 }
 .mob-only{display:none}
 
+
+/* ================= v6 : formules de contrat ================= */
+.lane.acc{background:rgba(167,123,255,.07)}
+.lrow{display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);gap:14px;padding:11px 0;border-top:1px solid #262626;font-size:clamp(15px,1.05vw,18px);line-height:1.45}
+.lrow dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#8a8a8a;padding-top:3px}
+.lrow dd{color:#e6e6e6}
+.lrow dd b{font-weight:700}
+.lane .ltag{display:inline-block;margin-top:14px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--c);padding:3px 10px;color:#fff}
+.optbox{border:1px dashed var(--orange);padding:clamp(18px,2vw,32px);margin-top:14px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:clamp(16px,3vw,48px);align-items:center}
+.optbox .lt{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);font-weight:700}
+.optbox h3{font-weight:700;font-size:clamp(20px,1.6vw,28px);line-height:1.2;margin-top:6px}
+.step .to{display:inline-block;margin-top:14px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--c);padding:4px 10px;color:#fff}
+@media(max-width:900px){.optbox{grid-template-columns:1fr}}
+@media(max-width:640px){.lrow{grid-template-columns:1fr;gap:2px}}
+
 @media(hover:none){.kbdhint{display:none}}
 </style>
 </head>
@@ -818,7 +833,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
     <div class="card"><span class="big">04</span><h3>Des niveaux prouvés</h3><p>Le niveau se prouve, puis ne progresse qu'avec des missions validées.</p></div>
     <div class="card"><span class="big">05</span><h3>Des recommandations par affinités</h3><p>L'IA relie projets et profils par leurs centres d'intérêt, sans trier.</p></div>
     <div class="card"><span class="big">06</span><h3>Un paiement sous séquestre</h3><p>Fonds bloqués au démarrage, libérés jalon par jalon.</p></div>
-    <div class="card"><span class="big">07</span><h3>Un contrat généré</h3><p>Un contrat signé électroniquement, adapté au statut : micro-entrepreneur ou artiste-auteur.</p></div>
+    <div class="card"><span class="big">07</span><h3>Un contrat protecteur</h3><p>Mission seule ou mission + intéressement, adapté au statut, crédit au générique garanti.</p></div>
     <div class="card"><span class="big">08</span><h3>Des notes et un contrôle</h3><p>Notes à l'aveugle, contrôle des livrables, sanctions en cas d'abus.</p></div>
   </div>
 </main>
@@ -963,6 +978,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i class="on"></i><i></i></span>Intermédiaire</span></dd>
             <dt>Profil</dt><dd>Unity, C#, systèmes de combat au tour par tour</dd>
             <dt>Accès</dt><dd><span class="atag">Ouvert à tous</span></dd>
+            <dt>Formule</dt><dd>Mission seule</dd>
             <dt>Missions</dt><dd>4 missions · 4 mois</dd>
           </dl>
         </div>
@@ -976,6 +992,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i class="on"></i><i class="on"></i></span>Pro · modélisation</span><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i></i><i></i></span>Débutant · UV</span></dd>
             <dt>Profil</dt><dd>Blender, low poly, dépliage UV</dd>
             <dt>Accès</dt><dd><span class="atag">Modélisation : ouvert</span><span class="atag res">UV : réservé</span></dd>
+            <dt>Formule</dt><dd>Personnage principal : + intéressement</dd>
             <dt>Missions</dt><dd>5 missions · 3 mois</dd>
           </dl>
         </div>
@@ -989,6 +1006,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i class="on"></i><i></i></span>Intermédiaire</span></dd>
             <dt>Profil</dt><dd>Rigs compatibles Unity, skinning, contrôleurs</dd>
             <dt>Accès</dt><dd><span class="atag">Ouvert à tous</span></dd>
+            <dt>Formule</dt><dd>Mission seule</dd>
             <dt>Missions</dt><dd>2 missions · 1 mois</dd>
           </dl>
         </div>
@@ -1002,6 +1020,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i></i><i></i></span>Débutant</span></dd>
             <dt>Profil</dt><dd>After Effects, animations d'interface</dd>
             <dt>Accès</dt><dd><span class="atag res">Réservé débutants · étudiants</span></dd>
+            <dt>Formule</dt><dd>Mission seule</dd>
             <dt>Missions</dt><dd>2 missions · 1 mois</dd>
           </dl>
         </div>
@@ -1050,7 +1069,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
     <div class="step c-blue"><span class="num">01 · Porteurs</span><h3>Publication</h3><p>La mission est décrite : livrables, critères, délai, niveau requis et accès (ouvert ou réservé). La plateforme propose un prix.</p></div>
     <div class="step c-orange"><span class="num">02 · Contributeurs</span><h3>Candidatures</h3><p>Les profils éligibles postulent. Une mission réservée n'est ouverte qu'aux débutants et aux étudiants.</p></div>
     <div class="step c-blue"><span class="num">03 · Porteurs</span><h3>Sélection</h3><p>Les porteurs choisissent librement, aidés par les affinités en commun proposées par l'IA.</p></div>
-    <div class="step c-acc"><span class="num">04 · Plateforme</span><h3>Contrat</h3><p>Le contrat est généré à partir de la fiche mission et signé électroniquement par les deux parties.</p></div>
+    <div class="step c-acc"><span class="num">04 · Plateforme</span><h3>Contrat</h3><p>Le contrat est généré à partir de la fiche mission, avec sa formule, et signé électroniquement par les deux parties.</p></div>
     <div class="step c-green"><span class="num">05 · Argent</span><h3>Séquestre</h3><p>Le montant de la mission est prélevé sur la cagnotte et bloqué jusqu'à validation.</p></div>
     <div class="step c-orange"><span class="num">06 · Contributeur</span><h3>Réalisation et livraison</h3><p>Le travail est livré jalon par jalon ; chaque jalon est contrôlé par la plateforme.</p></div>
     <div class="step c-blue"><span class="num">07 · Les deux parties</span><h3>Double validation</h3><p>Les porteurs valident le livrable ; le contributeur confirme la clôture du jalon.</p></div>
@@ -1249,6 +1268,8 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
         <li>Des fonds déposés avant le démarrage.</li>
         <li>Un périmètre contractuel : toute demande supplémentaire fait l'objet d'une nouvelle mission.</li>
         <li>Un nombre de retouches limité et une validation tacite en l'absence de réponse.</li>
+        <li>Le nom au générique du jeu, garanti par le droit moral.</li>
+        <li>Un intéressement aux recettes pour les créations essentielles.</li>
         <li>Le droit de présenter son travail dans son portfolio à la sortie du jeu.</li>
         <li>Une note et un niveau conservés d'un projet à l'autre.</li>
         <li>Des boosts offerts aux étudiants et aux débutants.</li>
@@ -1319,16 +1340,111 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
 <!-- ================= 10 CONTRAT ================= -->
 <main class="view" id="contrat" data-title="Le contrat" data-cat="La confiance" hidden>
   <header class="phead">
-    <div><p class="kicker"></p><h1>Le contrat généré</h1></div>
-    <p class="lead">Le contrat est la pierre angulaire de M&#8209;07. Il est établi automatiquement à partir de la fiche mission, puis signé électroniquement par les deux parties. Aucun engagement ne repose sur un accord oral.</p>
+    <div><p class="kicker"></p><h1>Le contrat</h1></div>
+    <p class="lead">Établi automatiquement, signé électroniquement, protecteur pour le travailleur. Le travail est toujours payé à la mission ; un intéressement aux recettes du jeu peut s'y ajouter.</p>
   </header>
-  <div class="split r2">
+
+  <div class="shd"><h2>Deux formules</h2><p>Choisies selon la nature de la mission.</p></div>
+  <div class="lanes">
+    <div class="lane" style="--c:#fff">
+      <span class="lt">Formule 1</span>
+      <h3>Mission seule</h3>
+      <dl>
+        <div class="lrow"><dt>Paiement</dt><dd><b>À la mission</b>, jalon par jalon</dd></div>
+        <div class="lrow"><dt>Droits</dt><dd>Cédés pour ce jeu uniquement</dd></div>
+        <div class="lrow"><dt>Recettes du jeu</dt><dd>Aucune part : le travailleur est détaché de tout autre revenu</dd></div>
+        <div class="lrow"><dt>Pour</dt><dd>Le code et les contributions secondaires</dd></div>
+      </dl>
+    </div>
+    <div class="lane acc" style="--c:var(--acc)">
+      <span class="lt">Formule 2 · recommandée</span>
+      <h3>Mission + intéressement</h3>
+      <dl>
+        <div class="lrow"><dt>Paiement</dt><dd><b>À la mission</b>, au prix normal</dd></div>
+        <div class="lrow"><dt>Droits</dt><dd>Cédés pour ce jeu uniquement</dd></div>
+        <div class="lrow"><dt>Recettes du jeu</dt><dd><b>Un petit pourcentage</b> des recettes nettes</dd></div>
+        <div class="lrow"><dt>Pour</dt><dd>Les créations essentielles et l'engagement long terme</dd></div>
+      </dl>
+      <span class="ltag">Formule par défaut pour les créations essentielles</span>
+    </div>
+  </div>
+  <div class="optbox">
+    <div><span class="lt">Option encadrée</span><h3>Prix réduit + intéressement renforcé</h3></div>
+    <div class="chips">
+      <span class="chip">Réservée aux intermédiaires et aux pros</span>
+      <span class="chip">Réduction plafonnée, par exemple 30 %</span>
+      <span class="chip">Choisie par le travailleur, jamais imposée</span>
+      <span class="chip cor">Interdite aux débutants et aux étudiants</span>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="shd"><h2>Pourquoi deux formules</h2><p>Le jeu vidéo est une œuvre complexe : chaque partie a son propre régime.</p></div>
+    <div class="steps three">
+      <div class="step c-blue"><span class="num">Le code</span><h3>Forfait autorisé</h3><p>Pour un logiciel, la rémunération de l'auteur peut être forfaitaire.</p><span class="to">Mission seule</span></div>
+      <div class="step c-orange"><span class="num">Une contribution secondaire</span><h3>Forfait possible</h3><p>Un objet de décor parmi des centaines n'est pas un élément essentiel du jeu.</p><span class="to">Mission seule</span></div>
+      <div class="step c-acc"><span class="num">Une création essentielle</span><h3>Pourcentage par principe</h3><p>Personnage principal, musique du jeu : l'auteur doit être intéressé aux recettes.</p><span class="to" style="border-color:var(--acc)">Mission + intéressement</span></div>
+    </div>
+  </div>
+
+  <div class="sec split">
+    <div>
+      <div class="shd"><h2>Les garde-fous de l'intéressement</h2></div>
+      <div class="vflow">
+        <div class="fbox" style="--c:var(--acc)"><span class="k">Base</span><b>Calculé sur les recettes nettes</b><span>Après la part des boutiques (Steam, consoles…).</span></div>
+        <span class="arr down" style="--c:var(--acc)"></span>
+        <div class="fbox" style="--c:var(--acc)"><span class="k">Durée</span><b>Limité dans le temps ou plafonné</b></div>
+        <span class="arr down" style="--c:var(--acc)"></span>
+        <div class="fbox" style="--c:var(--acc)"><span class="k">Projet</span><b>Un plafond total, tous contributeurs confondus</b><span>Le jeu reste viable pour ceux qui l'ont financé.</span></div>
+        <span class="arr down" style="--c:var(--acc)"></span>
+        <div class="fbox" style="--c:var(--green)"><span class="k">Loi</span><b>Un complément si le pourcentage s'avère trop faible</b><span>Prévu par le Code de la propriété intellectuelle.</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="shd"><h2>Le plafond par projet</h2><p>Exemple fictif, à calibrer.</p></div>
+      <div class="cgrid">
+        <div class="donut" style="--dfs:clamp(26px,2.2vw,40px)" data-center="15 %" data-sub="plafond fictif" data-aria="Exemple : intéressement plafonné à 15 % des recettes nettes" data-segs='[{"v":15,"c":"var(--acc)","n":"Intéressement des contributeurs","l":"15 % au maximum"},{"v":85,"c":"var(--blue)","n":"Porteurs de projet","l":"85 % ou plus"}]'></div>
+        <div>
+          <ul class="jlist">
+            <li style="--c:var(--acc)"><i></i><div><b>Contributeurs</b><span>Intéressement total plafonné</span></div><div class="amt">15 %</div></li>
+            <li style="--c:var(--blue)"><i></i><div><b>Porteurs de projet</b><span>Le reste des recettes nettes</span></div><div class="amt">85 %</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="shd"><h2>Le circuit de l'intéressement</h2><p>M&#8209;07 joue le tiers de confiance.</p></div>
+    <div class="flow" role="img" aria-label="Schéma : les recettes du jeu sont déclarées par les porteurs, M-07 calcule les parts puis les verse aux contributeurs.">
+      <div class="fbox" style="--c:var(--blue)"><span class="k">Jeu en vente</span><b>Recettes nettes</b><span>Steam, consoles, autres boutiques.</span></div>
+      <span class="arr"></span>
+      <div class="fbox" style="--c:var(--blue)"><span class="k">Porteurs</span><b>Déclaration</b><span>Relevés de ventes transmis à M&#8209;07.</span></div>
+      <span class="arr"></span>
+      <div class="fbox" style="--c:var(--acc)"><span class="k">M&#8209;07</span><b>Calcul des parts</b><span>Selon chaque contrat et le plafond.</span></div>
+      <span class="arr"></span>
+      <div class="fbox" style="--c:var(--green)"><span class="k">Contributeurs</span><b>Versement</b><span>Avec un relevé détaillé.</span></div>
+    </div>
+    <p class="note">L'engagement long terme (mises à jour, maintenance) se fait par de nouvelles missions payées, jamais par du travail gratuit en échange du pourcentage.</p>
+  </div>
+
+  <div class="sec">
+    <div class="shd"><h2>Les protections, dans tous les contrats</h2></div>
+    <div class="grid g4">
+      <div class="card line" style="--c:var(--green)"><span class="k">Crédit</span><h3>Le nom au générique</h3><p>Le droit moral est inaliénable : personne ne peut imposer à l'auteur de renoncer à sa paternité.</p></div>
+      <div class="card line" style="--c:var(--green)"><span class="k">Périmètre</span><h3>Une cession limitée</h3><p>Ce jeu, des supports et une durée précis. Une suite ou du merchandising font l'objet d'un nouveau contrat payé.</p></div>
+      <div class="card line" style="--c:var(--green)"><span class="k">Portfolio</span><h3>Le droit de montrer son travail</h3><p>À partir de la sortie du jeu.</p></div>
+      <div class="card line" style="--c:var(--green)"><span class="k">Retour</span><h3>Le retour des droits</h3><p>Si le jeu n'est jamais sorti au bout d'une durée fixée. Clause à faire valider.</p></div>
+    </div>
+  </div>
+
+  <div class="sec split r2">
     <div>
       <div class="shd"><h2>Son établissement</h2></div>
       <div class="vflow">
-        <div class="fbox" style="--c:var(--blue)"><span class="k">Porteurs</span><b>Fiche mission</b><span>Livrables, critères, prix, délais, retouches.</span></div>
+        <div class="fbox" style="--c:var(--blue)"><span class="k">Porteurs</span><b>Fiche mission</b><span>Livrables, critères, prix, délais, formule.</span></div>
         <span class="arr down"></span>
-        <div class="fbox" style="--c:var(--acc)"><span class="k">Plateforme</span><b>Contrat pré-rempli</b><span>Sur la base de modèles validés par un avocat.</span></div>
+        <div class="fbox" style="--c:var(--acc)"><span class="k">Plateforme</span><b>Contrat pré-rempli</b><span>Modèles validés par un avocat, adaptés au statut.</span></div>
         <span class="arr down"></span>
         <div class="fbox" style="--c:var(--green)"><span class="k">Les deux parties</span><b>Signature électronique</b><span>Le contrat est archivé avec la mission.</span></div>
       </div>
@@ -1337,19 +1453,26 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
       <div class="shd"><h2>Son contenu</h2></div>
       <ol class="clauses">
         <li><div><b>Les parties</b><span>Le projet, ses porteurs, le contributeur et son statut.</span></div></li>
-        <li><div><b>L'objet de la mission</b><span>Livrables, formats de fichiers, critères d'acceptation.</span></div></li>
-        <li><div><b>Le prix et les jalons</b><span>Montant total, découpage et montant de chaque jalon.</span></div></li>
+        <li><div><b>L'objet de la mission</b><span>Livrables, formats, critères d'acceptation.</span></div></li>
+        <li><div><b>Le prix et les jalons</b><span>Montant total et montant de chaque jalon.</span></div></li>
+        <li><div><b>La formule</b><span>Mission seule ou mission + intéressement, avec taux, base et durée.</span></div></li>
         <li><div><b>Les délais</b><span>Échéance de chaque jalon, délai de réponse des porteurs.</span></div></li>
         <li><div><b>Les retouches</b><span>Nombre de retouches incluses avant arbitrage.</span></div></li>
-        <li><div><b>La cession des droits</b><span>Chaque droit cédé mentionné distinctement, avec son étendue, sa destination, son lieu et sa durée.</span></div></li>
-        <li><div><b>La confidentialité</b><span>Ce que le contributeur peut présenter, et à partir de quand.</span></div></li>
-        <li><div><b>Le portfolio</b><span>Droit de présenter le travail à la sortie du jeu.</span></div></li>
+        <li><div><b>La cession des droits</b><span>Chaque droit cédé mentionné à part, avec son étendue, sa destination, son lieu et sa durée.</span></div></li>
+        <li><div><b>Le crédit</b><span>Le nom de l'auteur au générique du jeu.</span></div></li>
+        <li><div><b>La confidentialité et le portfolio</b><span>Ce qui peut être montré, et à partir de quand.</span></div></li>
         <li><div><b>La sortie anticipée</b><span>Ce qui est payé, ce qui retourne à la cagnotte.</span></div></li>
+        <li><div><b>Le retour des droits</b><span>Si le jeu ne sort pas dans le délai fixé.</span></div></li>
         <li><div><b>Le règlement des litiges</b><span>Retouches, puis arbitrage par la plateforme.</span></div></li>
       </ol>
     </div>
   </div>
-  <p class="note">Les modèles de contrat seront rédigés et validés par un avocat en propriété intellectuelle et en droit des plateformes.</p>
+  <p class="note">La frontière entre contribution secondaire et création essentielle, les taux et les plafonds sont à faire valider par un avocat en propriété intellectuelle.</p>
+  <p class="src">Sources :
+    <a href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006278969/2026-04-19" target="_blank" rel="noopener">Code de la propriété intellectuelle, rémunération de l'auteur (Légifrance)</a> ·
+    <a href="https://www.journaldunet.com/retail/1031859-le-jeu-video-bien-plus-qu-un-logiciel/" target="_blank" rel="noopener">Cour de cassation, 25 juin 2009 : le jeu vidéo, œuvre complexe (JDN)</a> ·
+    <a href="https://www.artcena.fr/artcena-juridique/droits-dauteurs-et-droits-voisins/droit-dauteur/droits-de-lauteur-sur-son-oeuvre" target="_blank" rel="noopener">Droit moral de l'auteur (ARTCENA)</a>
+  </p>
 </main>
 
 <!-- ================= 11 CONTRÔLE ================= -->
@@ -1513,7 +1636,7 @@ table.cmpt{width:100%;border-collapse:collapse;min-width:980px}
     <div class="grid g3">
       <div class="card line" style="--c:var(--orange)"><span class="k">Marque</span><h3>Identité de M&#8209;07</h3><p>Logo, charte et positionnement.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Contrôle</span><h3>IA, humain ou hybride</h3><p>Le modèle à deux niveaux est la piste actuelle.</p></div>
-      <div class="card line" style="--c:var(--orange)"><span class="k">Tarification</span><h3>Grille ou prix libre</h3><p>Grille imposée, fourchette indicative ou prix libre.</p></div>
+      <div class="card line" style="--c:var(--orange)"><span class="k">Rémunération</span><h3>Prix et intéressement</h3><p>Grille ou prix libre ; taux, plafond et durée de l'intéressement.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Marché</span><h3>France ou international</h3><p>Le droit et la fiscalité diffèrent selon les pays.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Commission</span><h3>Taux et répartition</h3><p>Taux définitif, remise pour le recrutement de débutants.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Équilibre</span><h3>Quotas et boosts</h3><p>Nombre de candidatures, missions en cours, prix des boosts.</p></div>
