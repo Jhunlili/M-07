@@ -366,6 +366,90 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   .cgrid{grid-template-columns:1fr}
   .cgrid .donut{max-width:200px}
 }
+
+/* ================= v4 : débutants, recommandations, abus ================= */
+.lanes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.lane{border:1px solid var(--c,#fff);padding:clamp(20px,2.2vw,40px)}
+.lane.res{background:rgba(46,175,120,.07)}
+.lane .lt{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--c,#fff);font-weight:700}
+.lane h3{font-weight:700;font-size:clamp(22px,2vw,36px);line-height:1.15;margin:6px 0 20px;letter-spacing:-.01em}
+.who4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.who4 div{border:1px solid #333;padding:16px 8px 14px;text-align:center;font-size:clamp(13px,1vw,16px);line-height:1.25}
+.who4 div::before{display:block;font-size:clamp(22px,2vw,32px);font-weight:700;line-height:1;margin-bottom:8px}
+.who4 .ok{border-color:var(--green);color:#fff}
+.who4 .ok::before{content:"\2713";color:var(--green)}
+.who4 .no{color:#5a5a5a}
+.who4 .no::before{content:"\2715";color:#444}
+.tile .tv{color:#fff;display:block;font-size:clamp(30px,2.8vw,54px);font-weight:700;line-height:1.05;letter-spacing:-.03em;margin:6px 0 6px}
+.tile.acc{border-color:var(--c)}
+.tile .pi{display:inline-block;margin-top:8px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid #444;padding:2px 8px}
+.quota{border-top:1px solid #333;padding:18px 0 20px}
+.quota .qh{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px}
+.quota .qh b{font-weight:700;font-size:clamp(17px,1.25vw,21px)}
+.quota .qh span{font-weight:700;font-size:clamp(22px,1.8vw,32px)}
+.quota p{font-size:15px;color:var(--muted);margin-top:10px}
+.sq{display:flex;flex-wrap:wrap;gap:6px}
+.sq i{display:block;width:clamp(18px,1.6vw,26px);height:clamp(18px,1.6vw,26px);border:1px solid var(--c,var(--orange))}
+.sq i.on{background:var(--c,var(--orange))}
+.atag{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid #555;padding:2px 8px;margin:2px 6px 2px 0;line-height:1.5;color:#dcdcdc}
+.atag.res{border-color:var(--green);background:rgba(46,175,120,.16);color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid #555;padding:7px 13px;font-size:clamp(14px,1vw,16px);line-height:1.3}
+.chip b{font-weight:700}
+.chip.acc{border-color:var(--acc)}
+.chip.cor{border-color:var(--coral)}
+.psec{padding:14px clamp(20px,2vw,34px) 8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7c7c7c;border-bottom:1px solid var(--line)}
+.afz{padding:16px clamp(20px,2vw,34px) 22px}
+.pfh .atag{margin-top:10px}
+.match{border:1px solid #333}
+.mrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);border-top:1px solid #222}
+.mrow.mh{border-top:0;border-bottom:1px solid #333}
+.mrow.mh div{padding:16px clamp(14px,1.6vw,28px);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--c)}
+.mrow.mh .mmh{text-align:center}
+.mrow.mh .mlh{text-align:right}
+.ml,.mr{padding:18px clamp(14px,1.6vw,28px);font-size:clamp(16px,1.15vw,20px);line-height:1.3}
+.ml{text-align:right}
+.ml b,.mr b{font-weight:700}
+.ml.off,.mr.off{color:#4a4a4a}
+.mm{position:relative;display:flex;align-items:center;justify-content:center;padding:10px 0}
+.mm.on{background:linear-gradient(var(--acc),var(--acc)) center/100% 1px no-repeat}
+.mm.on::before{content:"";position:absolute;left:-5px;top:calc(50% - 5px);width:10px;height:10px;background:var(--blue)}
+.mm.on::after{content:"";position:absolute;right:-5px;top:calc(50% - 5px);width:10px;height:10px;background:var(--orange)}
+.mm span{background:#000;border:1px solid var(--acc);padding:7px 14px;font-size:clamp(14px,1vw,16px);font-weight:700}
+.mm em{font-style:normal;font-size:13px;color:#4a4a4a;letter-spacing:.08em;text-transform:uppercase}
+.zones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.zone{border:1px solid var(--c,#fff);padding:clamp(18px,1.8vw,30px)}
+.zone.dash{border-style:dashed}
+.zone .zt{font-weight:700;font-size:clamp(20px,1.5vw,26px)}
+.zone .zs{font-size:14px;color:var(--muted);margin-bottom:14px}
+.zi{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 0;border-top:1px solid #262626;font-size:clamp(15px,1.05vw,18px)}
+.zi .chips{gap:6px}
+.zi .chip{font-size:12.5px;padding:3px 9px}
+.badge{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #fff;padding:3px 9px}
+.flow > .vflow{flex:1;gap:10px;min-width:0}
+.steps.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sanc .fbox:nth-child(1){--c:var(--orange)}
+.sanc .fbox:nth-child(3){--c:var(--coral)}
+.sanc .fbox:nth-child(5){--c:var(--hover);background:rgba(255,45,45,.08)}
+@media(max-width:900px){
+  .lanes,.zones{grid-template-columns:1fr}
+  .steps.three{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .who4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps.three{grid-template-columns:1fr}
+  .mrow{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .mrow .mm{grid-column:1/-1;order:3;padding:0 0 14px}
+  .mrow.mh .mmh{display:none}
+  .mrow.mh div{padding:12px 14px}
+  .ml{text-align:left}
+  .mrow.mh .mlh{text-align:left}
+  .mm.on::before,.mm.on::after{display:none}
+  .mm.on{background:none}
+  .mm em{display:none}
+  .mm{padding:0}
+}
+
 @media(hover:none){.kbdhint{display:none}}
 </style>
 </head>
@@ -388,21 +472,24 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <a href="#marche"><span class="k">01</span><span>Le marché</span></a>
     <a href="#demande"><span class="k">02</span><span>La demande</span></a>
     <a href="#valeur"><span class="k">03</span><span>La proposition de valeur</span></a>
+    <a href="#debutants"><span class="k">04</span><span>Débutants et étudiants</span></a>
     <div class="label">Le fonctionnement</div>
-    <a href="#acteurs"><span class="k">04</span><span>Les acteurs</span></a>
-    <a href="#fiche"><span class="k">05</span><span>La fiche projet</span></a>
-    <a href="#cycle"><span class="k">06</span><span>Le cycle d'une mission</span></a>
-    <a href="#profils"><span class="k">07</span><span>Les profils</span></a>
-    <a href="#jalons"><span class="k">08</span><span>Le paiement par jalons</span></a>
+    <a href="#acteurs"><span class="k">05</span><span>Les acteurs</span></a>
+    <a href="#fiche"><span class="k">06</span><span>La fiche projet</span></a>
+    <a href="#cycle"><span class="k">07</span><span>Le cycle d'une mission</span></a>
+    <a href="#profils"><span class="k">08</span><span>Les niveaux</span></a>
+    <a href="#reco"><span class="k">09</span><span>Les recommandations</span></a>
+    <a href="#jalons"><span class="k">10</span><span>Le paiement par jalons</span></a>
     <div class="label">La confiance</div>
-    <a href="#garanties"><span class="k">09</span><span>Les garanties</span></a>
-    <a href="#contrat"><span class="k">10</span><span>Le contrat</span></a>
-    <a href="#verification"><span class="k">11</span><span>Le contrôle</span></a>
+    <a href="#garanties"><span class="k">11</span><span>Les garanties</span></a>
+    <a href="#abus"><span class="k">12</span><span>Notes et abus</span></a>
+    <a href="#contrat"><span class="k">13</span><span>Le contrat</span></a>
+    <a href="#verification"><span class="k">14</span><span>Le contrôle</span></a>
     <div class="label">Le lancement</div>
-    <a href="#cas"><span class="k">12</span><span>Un cas chiffré</span></a>
-    <a href="#modele"><span class="k">13</span><span>Le modèle économique</span></a>
-    <a href="#legal"><span class="k">14</span><span>Le cadre légal</span></a>
-    <a href="#feuille"><span class="k">15</span><span>La feuille de route</span></a>
+    <a href="#cas"><span class="k">15</span><span>Un cas chiffré</span></a>
+    <a href="#modele"><span class="k">16</span><span>Le modèle économique</span></a>
+    <a href="#legal"><span class="k">17</span><span>Le cadre légal</span></a>
+    <a href="#feuille"><span class="k">18</span><span>La feuille de route</span></a>
   </nav>
   <div class="sfoot">Un projet de Lydia Abid · novembre 2026<span class="kbdhint"><br><span class="kbd">←</span> <span class="kbd">→</span> changer de page</span></div>
 </aside>
@@ -420,7 +507,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <div>
       <p class="pitch">La plateforme de production collaborative pour le jeu vidéo. Les porteurs de projet financent leur jeu et commissionnent les bons profils, mission par mission. Le paiement n'est libéré qu'une fois le travail validé par les deux parties.</p>
       <div class="tags">
-        <span class="tag">Jeu vidéo</span><span class="tag">Missions rémunérées</span><span class="tag">Débutant à pro</span><span class="tag">Paiement sous séquestre</span><span class="tag">Contrats générés</span>
+        <span class="tag">Jeu vidéo</span><span class="tag">Missions rémunérées</span><span class="tag">Place réservée aux débutants</span><span class="tag">Recommandations par affinités</span><span class="tag">Paiement sous séquestre</span><span class="tag">Contrats générés</span>
       </div>
       <a class="btn" href="#marche">Découvrir le projet &gt;</a>
     </div>
@@ -437,27 +524,30 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
       <a href="#marche"><span class="n">01</span><span>Le marché</span></a>
       <a href="#demande"><span class="n">02</span><span>La demande</span></a>
       <a href="#valeur"><span class="n">03</span><span>La proposition de valeur</span></a>
+      <a href="#debutants"><span class="n">04</span><span>Débutants et étudiants</span></a>
     </div>
     <div class="cat">
       <div class="label">Le fonctionnement</div>
-      <a href="#acteurs"><span class="n">04</span><span>Les acteurs</span></a>
-      <a href="#fiche"><span class="n">05</span><span>La fiche projet</span></a>
-      <a href="#cycle"><span class="n">06</span><span>Le cycle d'une mission</span></a>
-      <a href="#profils"><span class="n">07</span><span>Les profils</span></a>
-      <a href="#jalons"><span class="n">08</span><span>Le paiement par jalons</span></a>
+      <a href="#acteurs"><span class="n">05</span><span>Les acteurs</span></a>
+      <a href="#fiche"><span class="n">06</span><span>La fiche projet</span></a>
+      <a href="#cycle"><span class="n">07</span><span>Le cycle d'une mission</span></a>
+      <a href="#profils"><span class="n">08</span><span>Les niveaux</span></a>
+      <a href="#reco"><span class="n">09</span><span>Les recommandations</span></a>
+      <a href="#jalons"><span class="n">10</span><span>Le paiement par jalons</span></a>
     </div>
     <div class="cat">
       <div class="label">La confiance</div>
-      <a href="#garanties"><span class="n">09</span><span>Les garanties</span></a>
-      <a href="#contrat"><span class="n">10</span><span>Le contrat</span></a>
-      <a href="#verification"><span class="n">11</span><span>Le contrôle</span></a>
+      <a href="#garanties"><span class="n">11</span><span>Les garanties</span></a>
+      <a href="#abus"><span class="n">12</span><span>Notes et abus</span></a>
+      <a href="#contrat"><span class="n">13</span><span>Le contrat</span></a>
+      <a href="#verification"><span class="n">14</span><span>Le contrôle</span></a>
     </div>
     <div class="cat">
       <div class="label">Le lancement</div>
-      <a href="#cas"><span class="n">12</span><span>Un cas chiffré</span></a>
-      <a href="#modele"><span class="n">13</span><span>Le modèle économique</span></a>
-      <a href="#legal"><span class="n">14</span><span>Le cadre légal</span></a>
-      <a href="#feuille"><span class="n">15</span><span>La feuille de route</span></a>
+      <a href="#cas"><span class="n">15</span><span>Un cas chiffré</span></a>
+      <a href="#modele"><span class="n">16</span><span>Le modèle économique</span></a>
+      <a href="#legal"><span class="n">17</span><span>Le cadre légal</span></a>
+      <a href="#feuille"><span class="n">18</span><span>La feuille de route</span></a>
     </div>
   </nav>
 
@@ -572,15 +662,77 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
 <main class="view" id="valeur" data-title="La proposition de valeur" data-cat="Le projet" hidden>
   <header class="phead">
     <div><p class="kicker"></p><h1>La proposition de valeur</h1></div>
-    <p class="lead">M&#8209;07 réunit sur une seule plateforme tout ce qu'il faut pour produire un jeu avec des renforts extérieurs : le budget, les missions, les talents, le contrat et le paiement. Le principe : on ne rémunère pas du temps, on rémunère des livrables vérifiés et validés.</p>
+    <p class="lead">Une seule plateforme pour produire un jeu avec des renforts extérieurs. On ne rémunère pas du temps : on rémunère des livrables vérifiés et validés.</p>
   </header>
-  <div class="grid g3">
-    <div class="card"><span class="big">01</span><h3>Un espace projet</h3><p>Les porteurs créent leur fiche projet et alimentent une cagnotte dédiée. Missions, fichiers, échanges et budget restant sont centralisés.</p></div>
-    <div class="card"><span class="big">02</span><h3>Des missions ciblées</h3><p>Le projet est découpé en missions précises (corriger un bug, modéliser un personnage, déplier des UV), chacune avec ses livrables, ses critères d'acceptation et son prix.</p></div>
-    <div class="card"><span class="big">03</span><h3>Des profils évalués par compétence</h3><p>Un contributeur peut être intermédiaire en UV et débutant en modélisation : il est commissionné sur ce qu'il maîtrise réellement.</p></div>
-    <div class="card"><span class="big">04</span><h3>Un paiement sous séquestre</h3><p>Les fonds sont déposés avant le démarrage et libérés jalon par jalon, après validation des deux parties.</p></div>
-    <div class="card"><span class="big">05</span><h3>Un contrat généré</h3><p>Chaque mission acceptée donne lieu à un contrat établi automatiquement : livrables, prix, délais, retouches, cession des droits, conditions de sortie.</p></div>
-    <div class="card"><span class="big">06</span><h3>Un contrôle et un arbitrage</h3><p>Les livrables sont contrôlés par la plateforme. En cas de désaccord, M&#8209;07 arbitre sur la base des critères définis au départ.</p></div>
+  <div class="grid g4">
+    <div class="card"><span class="big">01</span><h3>Un espace projet</h3><p>Budget, missions, fichiers et échanges réunis sur une fiche projet.</p></div>
+    <div class="card"><span class="big">02</span><h3>Des missions ciblées</h3><p>Livrables, critères d'acceptation et prix définis pour chaque mission.</p></div>
+    <div class="card" style="--c:var(--green)"><span class="big">03</span><h3>Une place pour les débutants</h3><p>Des missions réservées aux débutants et aux étudiants, fermées aux pros.</p></div>
+    <div class="card"><span class="big">04</span><h3>Des niveaux prouvés</h3><p>Le niveau se prouve, puis ne progresse qu'avec des missions validées.</p></div>
+    <div class="card"><span class="big">05</span><h3>Des recommandations par affinités</h3><p>L'IA relie projets et profils par leurs centres d'intérêt, sans trier.</p></div>
+    <div class="card"><span class="big">06</span><h3>Un paiement sous séquestre</h3><p>Fonds bloqués au démarrage, libérés jalon par jalon.</p></div>
+    <div class="card"><span class="big">07</span><h3>Un contrat généré</h3><p>Chaque mission donne lieu à un contrat signé électroniquement.</p></div>
+    <div class="card"><span class="big">08</span><h3>Des notes et un contrôle</h3><p>Notes à l'aveugle, contrôle des livrables, sanctions en cas d'abus.</p></div>
+  </div>
+</main>
+
+<main class="view" id="debutants" data-title="Débutants et étudiants" data-cat="Le projet" hidden>
+  <header class="phead">
+    <div><p class="kicker"></p><h1>Une place réservée aux débutants et aux étudiants</h1></div>
+    <p class="lead">C'est le cœur de M&#8209;07. Sans règle, les profils expérimentés remportent toutes les missions. La plateforme réserve donc une partie du travail à ceux qui débutent.</p>
+  </header>
+
+  <div class="shd"><h2>Deux types de missions</h2><p>Le porteur choisit l'accès au moment de publier.</p></div>
+  <div class="lanes">
+    <div class="lane" style="--c:#fff">
+      <span class="lt">Accès ouvert</span>
+      <h3>Mission ouverte à tous</h3>
+      <div class="who4"><div class="ok">Étudiant</div><div class="ok">Débutant</div><div class="ok">Intermédiaire</div><div class="ok">Pro</div></div>
+    </div>
+    <div class="lane res" style="--c:var(--green)">
+      <span class="lt">Accès réservé</span>
+      <h3>Mission réservée débutants et étudiants</h3>
+      <div class="who4"><div class="ok">Étudiant</div><div class="ok">Débutant</div><div class="no">Intermédiaire</div><div class="no">Pro</div></div>
+    </div>
+  </div>
+  <p class="note">Aucun boost payant ne donne accès à une mission réservée.</p>
+
+  <div class="sec">
+    <div class="shd"><h2>Les avantages</h2></div>
+    <div class="tiles">
+      <div class="tile acc" style="--c:var(--green)"><span class="tl1">Missions réservées</span><span class="tv">Exclusif</span><span>une partie des missions leur est uniquement ouverte</span></div>
+      <div class="tile acc" style="--c:var(--green)"><span class="tl1">Boost offert</span><span class="tv">1 / mois</span><span>pour être mis en avant sans payer</span></div>
+      <div class="tile acc" style="--c:var(--green)"><span class="tl1">Badge</span><span class="tv">Étudiant vérifié</span><span>sur présentation d'un certificat de scolarité</span></div>
+      <div class="tile"><span class="tl1">Pour le porteur</span><span class="tv">−50 %</span><span>de commission quand il recrute un débutant ou un étudiant</span><br><span class="pi">Piste</span></div>
+    </div>
+  </div>
+
+  <div class="sec split">
+    <div>
+      <div class="shd"><h2>Contre ceux qui raflent tout</h2><p>Valeurs indicatives, à calibrer.</p></div>
+      <div class="quota">
+        <div class="qh"><b>Candidatures par mois</b><span>10</span></div>
+        <div class="sq"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+        <p>Gratuites pour tous au lancement. Le quota empêche de postuler partout.</p>
+      </div>
+      <div class="quota">
+        <div class="qh"><b>Missions en cours en même temps</b><span>3 max.</span></div>
+        <div class="sq"><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        <p>Personne ne peut accaparer le travail disponible.</p>
+      </div>
+    </div>
+    <div>
+      <div class="shd"><h2>Un choix libre et éclairé</h2></div>
+      <div class="vflow">
+        <div class="fbox" style="--c:var(--green)"><span class="k">Candidature</span><b>Le niveau est affiché sans ambiguïté</b></div>
+        <span class="arr down"></span>
+        <div class="fbox" style="--c:var(--acc)"><span class="k">Aide au choix</span><b>Les affinités en commun sont proposées</b></div>
+        <span class="arr down"></span>
+        <div class="fbox" style="--c:var(--blue)"><span class="k">Décision</span><b>Le porteur choisit, sans priorité imposée</b></div>
+        <span class="arr down"></span>
+        <div class="fbox"><span class="k">Garanties</span><b>Jalons, retouches et arbitrage pour tous les niveaux</b></div>
+      </div>
+    </div>
   </div>
 </main>
 
@@ -636,7 +788,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
 <main class="view" id="fiche" data-title="La fiche projet" data-cat="Le fonctionnement" hidden>
   <header class="phead">
     <div><p class="kicker"></p><h1>La fiche projet</h1></div>
-    <p class="lead">Tout projet sur M&#8209;07 commence par une fiche. Les porteurs y fixent le budget, le calendrier et les postes à pourvoir. Pour chaque poste, ils définissent le niveau requis, le profil recherché et la part du budget allouée.</p>
+    <p class="lead">Tout projet sur M&#8209;07 commence par une fiche. Les porteurs y fixent le budget, le calendrier et les postes à pourvoir. Pour chaque poste, ils définissent le niveau requis, l'accès (ouvert ou réservé), le profil recherché et la part du budget.</p>
   </header>
 
   <article class="fiche" aria-label="Exemple de fiche projet">
@@ -645,7 +797,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
         <span class="flabel">Fiche projet · exemple fictif</span>
         <h2 class="fname">Projet Aube</h2>
         <p class="fpitch">RPG tactique en 3D · Unity · PC</p>
-        <div class="ftags"><span class="tag">3 porteurs</span><span class="tag">6 contributeurs</span><span class="tag">Télétravail</span><span class="tag">Objectif : démo jouable</span></div>
+        <div class="ftags"><span class="tag">Univers : lo-fi · cozy</span><span class="tag">3 porteurs</span><span class="tag">6 contributeurs</span><span class="tag">Télétravail</span><span class="tag">Objectif : démo jouable</span></div>
         <p class="fdesc">Trois associés ont conçu le game design et financent le projet sur fonds propres. Ils recherchent les compétences de développement, de 3D, de rigging et de motion design nécessaires pour produire une démo jouable.</p>
       </div>
       <div class="fkpi">
@@ -663,6 +815,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
           <dl class="rdl">
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i class="on"></i><i></i></span>Intermédiaire</span></dd>
             <dt>Profil</dt><dd>Unity, C#, systèmes de combat au tour par tour</dd>
+            <dt>Accès</dt><dd><span class="atag">Ouvert à tous</span></dd>
             <dt>Missions</dt><dd>4 missions · 4 mois</dd>
           </dl>
         </div>
@@ -675,6 +828,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
           <dl class="rdl">
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i class="on"></i><i class="on"></i></span>Pro · modélisation</span><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i></i><i></i></span>Débutant · UV</span></dd>
             <dt>Profil</dt><dd>Blender, low poly, dépliage UV</dd>
+            <dt>Accès</dt><dd><span class="atag">Modélisation : ouvert</span><span class="atag res">UV : réservé</span></dd>
             <dt>Missions</dt><dd>5 missions · 3 mois</dd>
           </dl>
         </div>
@@ -687,6 +841,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
           <dl class="rdl">
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i class="on"></i><i></i></span>Intermédiaire</span></dd>
             <dt>Profil</dt><dd>Rigs compatibles Unity, skinning, contrôleurs</dd>
+            <dt>Accès</dt><dd><span class="atag">Ouvert à tous</span></dd>
             <dt>Missions</dt><dd>2 missions · 1 mois</dd>
           </dl>
         </div>
@@ -699,6 +854,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
           <dl class="rdl">
             <dt>Niveau</dt><dd class="lvl"><span><span class="lvsym" style="--c:#fff"><i class="on"></i><i></i><i></i></span>Débutant</span></dd>
             <dt>Profil</dt><dd>After Effects, animations d'interface</dd>
+            <dt>Accès</dt><dd><span class="atag res">Réservé débutants · étudiants</span></dd>
             <dt>Missions</dt><dd>2 missions · 1 mois</dd>
           </dl>
         </div>
@@ -722,10 +878,11 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     </div>
   </article>
 
-  <div class="sec grid g3">
+  <div class="sec grid g4">
     <div class="card line" style="--c:var(--blue)"><span class="k">Budget</span><h3>Un plafond par poste</h3><p>Chaque poste reçoit une enveloppe. Les missions publiées ne peuvent pas la dépasser sans accord des porteurs.</p></div>
     <div class="card line" style="--c:var(--blue)"><span class="k">Temps</span><h3>Un calendrier par mission</h3><p>Chaque mission a sa durée et ses jalons datés, alignés sur l'objectif global du projet.</p></div>
-    <div class="card line" style="--c:var(--blue)"><span class="k">Niveau</span><h3>Un niveau requis par poste</h3><p>Seuls les profils qui disposent du niveau demandé sur la compétence concernée peuvent postuler.</p></div>
+    <div class="card line" style="--c:var(--blue)"><span class="k">Niveau</span><h3>Un niveau requis par poste</h3><p>Seuls les profils qui ont le niveau demandé sur la compétence concernée peuvent postuler.</p></div>
+    <div class="card line" style="--c:var(--green)"><span class="k">Accès</span><h3>Ouvert ou réservé</h3><p>Chaque mission peut être réservée aux débutants et aux étudiants.</p></div>
   </div>
   <p class="note">Commission M&#8209;07 calculée à 8 % du montant des missions (hypothèse de travail). Exemple fictif.</p>
 </main>
@@ -743,9 +900,9 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <span><i style="--c:var(--green)"></i>Argent</span>
   </div>
   <div class="steps">
-    <div class="step c-blue"><span class="num">01 · Porteurs</span><h3>Publication</h3><p>La mission est décrite : livrables, critères d'acceptation, délai et niveau requis. La plateforme propose un prix de référence.</p></div>
-    <div class="step c-orange"><span class="num">02 · Contributeurs</span><h3>Candidatures</h3><p>Les profils qui disposent du niveau requis sur la compétence concernée postulent, portfolio et historique à l'appui.</p></div>
-    <div class="step c-blue"><span class="num">03 · Porteurs</span><h3>Sélection</h3><p>Les porteurs retiennent un profil. S'il s'agit d'un débutant, ils confirment explicitement ce choix.</p></div>
+    <div class="step c-blue"><span class="num">01 · Porteurs</span><h3>Publication</h3><p>La mission est décrite : livrables, critères, délai, niveau requis et accès (ouvert ou réservé). La plateforme propose un prix.</p></div>
+    <div class="step c-orange"><span class="num">02 · Contributeurs</span><h3>Candidatures</h3><p>Les profils éligibles postulent. Une mission réservée n'est ouverte qu'aux débutants et aux étudiants.</p></div>
+    <div class="step c-blue"><span class="num">03 · Porteurs</span><h3>Sélection</h3><p>Les porteurs choisissent librement, aidés par les affinités en commun proposées par l'IA.</p></div>
     <div class="step c-acc"><span class="num">04 · Plateforme</span><h3>Contrat</h3><p>Le contrat est généré à partir de la fiche mission et signé électroniquement par les deux parties.</p></div>
     <div class="step c-green"><span class="num">05 · Argent</span><h3>Séquestre</h3><p>Le montant de la mission est prélevé sur la cagnotte et bloqué jusqu'à validation.</p></div>
     <div class="step c-orange"><span class="num">06 · Contributeur</span><h3>Réalisation et livraison</h3><p>Le travail est livré jalon par jalon ; chaque jalon est contrôlé par la plateforme.</p></div>
@@ -763,16 +920,45 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
 </main>
 
 <!-- ================= 07 PROFILS ================= -->
-<main class="view" id="profils" data-title="Les profils" data-cat="Le fonctionnement" hidden>
+<main class="view" id="profils" data-title="Les niveaux" data-cat="Le fonctionnement" hidden>
   <header class="phead">
-    <div><p class="kicker"></p><h1>Des profils évalués par compétence</h1></div>
-    <p class="lead">Un profil M&#8209;07 n'est pas un intitulé de poste, mais un ensemble de compétences évaluées séparément. Chaque contributeur déclare ses compétences ; le niveau progresse ensuite au fil des missions validées.</p>
+    <div><p class="kicker"></p><h1>Des niveaux qui se prouvent</h1></div>
+    <p class="lead">Chaque profil est évalué compétence par compétence. Personne ne se déclare pro : le niveau se prouve au départ, puis évolue uniquement avec les missions.</p>
   </header>
 
-  <div class="grid g3">
-    <div class="card" style="--c:var(--green)"><span class="lvsym"><i class="on"></i><i></i><i></i></span><h3>Débutant</h3><p>Étudiants, autodidactes, personnes en reconversion. Tarif réduit, missions de périmètre limité : un premier accès au travail rémunéré.</p></div>
-    <div class="card" style="--c:var(--orange)"><span class="lvsym"><i class="on"></i><i class="on"></i><i></i></span><h3>Intermédiaire</h3><p>Plusieurs missions validées et bien notées sur la compétence. Missions plus longues, réalisées en autonomie.</p></div>
-    <div class="card" style="--c:var(--acc)"><span class="lvsym"><i class="on"></i><i class="on"></i><i class="on"></i></span><h3>Pro</h3><p>Expérience professionnelle vérifiée ou historique solide sur la plateforme. Missions complexes, exigences élevées.</p></div>
+  <div class="shd"><h2>Le point de départ</h2></div>
+  <div class="grid g2">
+    <div class="fbox" style="--c:var(--green)"><span class="k">Par défaut</span><b>Tout le monde commence débutant</b><span>Sans preuve, aucun niveau supérieur n'est attribué.</span></div>
+    <div class="fbox"><span class="k">Avec preuve</span><b>Un niveau de départ adapté</b><span>Portfolio vérifié, test pratique ou expérience professionnelle prouvée.</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="shd"><h2>L'évolution, compétence par compétence</h2><p>Aucun niveau ne se modifie à la main.</p></div>
+    <div class="eco" role="img" aria-label="Schéma : du niveau débutant au niveau intermédiaire puis pro grâce aux missions validées et bien notées ; retour au niveau inférieur en cas d'échecs répétés.">
+      <div class="node" style="--c:var(--green)">
+        <span class="nl">Débutant</span>
+        <span class="lvsym" style="--c:var(--green)"><i class="on"></i><i></i><i></i></span>
+        <p class="who" style="margin-top:12px">Étudiants, autodidactes, personnes en reconversion. Tarif réduit.</p>
+      </div>
+      <div class="conn">
+        <div class="ar" style="--c:var(--green)">Missions validées et bien notées</div>
+        <div class="ar l" style="--c:var(--coral)">Échecs répétés</div>
+      </div>
+      <div class="node" style="--c:var(--orange)">
+        <span class="nl">Intermédiaire</span>
+        <span class="lvsym" style="--c:var(--orange)"><i class="on"></i><i class="on"></i><i></i></span>
+        <p class="who" style="margin-top:12px">Plusieurs missions validées sur la compétence. Autonome.</p>
+      </div>
+      <div class="conn">
+        <div class="ar" style="--c:var(--green)">Missions validées et bien notées</div>
+        <div class="ar l" style="--c:var(--coral)">Échecs répétés</div>
+      </div>
+      <div class="node" style="--c:var(--acc)">
+        <span class="nl">Pro</span>
+        <span class="lvsym" style="--c:var(--acc)"><i class="on"></i><i class="on"></i><i class="on"></i></span>
+        <p class="who" style="margin-top:12px">Expérience vérifiée ou historique solide. Missions complexes.</p>
+      </div>
+    </div>
   </div>
 
   <div class="sec split l2">
@@ -780,41 +966,85 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
       <div class="shd"><h2>La fiche profil</h2></div>
       <article class="pfiche" aria-label="Exemple de fiche profil">
         <div class="pfh">
-          <div><span class="flabel">Fiche profil · exemple fictif</span><h3 class="fname">Inès</h3><p style="color:#cfcfcf">Étudiante en 3D · disponible · télétravail</p></div>
+          <div><span class="flabel">Fiche profil · exemple fictif</span><h3 class="fname">Inès</h3><p style="color:#cfcfcf">Étudiante en 3D · disponible · télétravail</p><span class="atag res">Étudiante vérifiée</span></div>
           <div class="pstats"><div><b>7</b><span>Missions</span></div><div><b>4,8</b><span>Note / 5</span></div></div>
         </div>
+        <div class="psec">Compétences · prouvées</div>
         <div class="srow hi"><span>Dépliage UV</span><span class="lvsym"><i class="on"></i><i class="on"></i><i></i></span><span class="t">Intermédiaire</span></div>
         <div class="srow"><span>Modélisation low poly</span><span class="lvsym"><i class="on"></i><i></i><i></i></span><span class="t">Débutant</span></div>
         <div class="srow"><span>Texturing</span><span class="lvsym"><i class="on"></i><i></i><i></i></span><span class="t">Débutant</span></div>
-        <div class="srow"><span>Rigging</span><span class="lvsym"><i></i><i></i><i></i></span><span class="t">Non renseigné</span></div>
+        <div class="psec">Affinités · déclarées</div>
+        <div class="afz chips">
+          <span class="chip acc"><b>Lo-fi</b> · passionnée</span>
+          <span class="chip acc"><b>Pixel art</b> · passionnée</span>
+          <span class="chip acc"><b>Cozy</b> · intéressée</span>
+          <span class="chip acc"><b>RPG</b> · déjà pratiqué</span>
+        </div>
       </article>
-      <p class="note">Inès peut postuler à la mission UV du poste 3D du Projet Aube : son niveau dépasse le niveau requis.</p>
+      <p class="note">Les compétences se prouvent. Les affinités se déclarent et servent uniquement aux recommandations.</p>
     </div>
     <div>
-      <div class="shd"><h2>Le prix suit le niveau</h2></div>
-      <p style="color:#b5b5b5;margin-bottom:10px">Mission « Dépliage UV d'un personnage », prix de base 100&nbsp;€. Chiffres indicatifs, à calibrer avec le marché.</p>
+      <div class="shd"><h2>Le prix suit le niveau</h2><p>Chiffres indicatifs</p></div>
+      <p style="color:#b5b5b5;margin-bottom:10px">Mission « Dépliage UV d'un personnage », prix de base 100&nbsp;€.</p>
       <div class="prow"><span>Débutant</span><div class="bar" style="width:33%;--o:.45"></div><span class="v">60&nbsp;€</span></div>
       <div class="prow"><span>Intermédiaire</span><div class="bar" style="width:56%;--o:.75"></div><span class="v">100&nbsp;€</span></div>
       <div class="prow"><span>Pro</span><div class="bar" style="width:100%"></div><span class="v">180&nbsp;€</span></div>
-      <div class="shd" style="margin-top:40px"><h2>La progression</h2></div>
-      <div class="vflow">
-        <div class="fbox"><span class="k">01</span><b>Mission validée</b></div>
-        <span class="arr down"></span>
-        <div class="fbox"><span class="k">02</span><b>Note des porteurs</b></div>
-        <span class="arr down"></span>
-        <div class="fbox"><span class="k">03</span><b>Points gagnés sur la compétence</b></div>
-        <span class="arr down"></span>
-        <div class="fbox" style="--c:var(--orange)"><span class="k">04</span><b>Passage au niveau supérieur</b></div>
+      <div class="quota" style="margin-top:30px">
+        <div class="qh"><b>Mentir sur son niveau</b><span style="color:var(--coral)">Sanctionné</span></div>
+        <p>Un niveau contredit par les livrables entraîne une rétrogradation, puis les sanctions prévues contre les abus.</p>
       </div>
+    </div>
+  </div>
+</main>
+
+<main class="view" id="reco" data-title="Les recommandations" data-cat="Le fonctionnement" hidden>
+  <header class="phead">
+    <div><p class="kicker"></p><h1>Des recommandations par affinités</h1></div>
+    <p class="lead">L'IA ne note pas et ne trie pas. Elle relie une fiche projet et une fiche profil par leurs points communs, puis les présente au porteur, qui choisit librement.</p>
+  </header>
+
+  <div class="shd"><h2>Exemple : Projet Aube × Inès</h2><p>Mission UV, réservée aux débutants et étudiants</p></div>
+  <div class="match" role="img" aria-label="Schéma : le projet lo-fi, cozy, RPG et le profil d'Inès ont trois affinités en commun : lo-fi, cozy et RPG.">
+    <div class="mrow mh"><div class="mlh" style="--c:var(--blue)">Fiche projet · Projet Aube</div><div class="mmh" style="--c:var(--acc)">Affinités en commun</div><div style="--c:var(--orange)">Fiche profil · Inès</div></div>
+    <div class="mrow"><div class="ml">Univers · <b>Lo-fi</b></div><div class="mm on"><span>Lo-fi · passionnée</span></div><div class="mr"><b>Lo-fi</b> · passionnée</div></div>
+    <div class="mrow"><div class="ml">Ambiance · <b>Cozy</b></div><div class="mm on"><span>Cozy · intéressée</span></div><div class="mr"><b>Cozy</b> · intéressée</div></div>
+    <div class="mrow"><div class="ml">Genre · <b>RPG</b></div><div class="mm on"><span>RPG · déjà pratiqué</span></div><div class="mr"><b>RPG</b> · déjà pratiqué</div></div>
+    <div class="mrow"><div class="ml">Moteur · <b>Unity</b></div><div class="mm"><em>Pas de lien</em></div><div class="mr off">Non renseigné</div></div>
+    <div class="mrow"><div class="ml off">Non demandé</div><div class="mm"><em>Pas de lien</em></div><div class="mr"><b>Pixel art</b> · passionnée</div></div>
+  </div>
+  <div class="vflow" style="margin-top:0">
+    <span class="arr down" style="--c:var(--acc);margin-left:50%"></span>
+    <div class="fbox" style="--c:var(--acc)"><span class="k">Présenté au porteur</span><b>Inès · 3 affinités en commun</b><span>Lo-fi (passionnée) · Cozy (intéressée) · RPG (déjà pratiqué). Le porteur décide.</span></div>
+  </div>
+
+  <div class="sec grid g2">
+    <div class="card col" style="--c:var(--acc)">
+      <span class="k">Ce que fait l'IA</span>
+      <ul class="plain"><li>Relie les réponses des deux fiches.</li><li>Explique chaque lien proposé.</li><li>Suggère des profils au porteur et des missions au contributeur.</li></ul>
+    </div>
+    <div class="card col" style="--c:#666">
+      <span class="k">Ce qu'elle ne fait pas</span>
+      <ul class="plain"><li>Noter la qualité du travail.</li><li>Trier ou masquer des profils.</li><li>Pénaliser les nouveaux inscrits.</li><li>Choisir à la place du porteur.</li></ul>
     </div>
   </div>
 
   <div class="sec">
-    <div class="shd"><h2>Recruter un débutant : un choix assumé</h2><p>M&#8209;07 n'impose pas d'encadrement des débutants.</p></div>
-    <div class="grid g3">
-      <div class="card line" style="--c:var(--green)"><span class="k">Coût</span><h3>Un tarif réduit</h3><p>Une mission confiée à un débutant coûte moins cher qu'à un profil confirmé. C'est un arbitrage entre coût et risque, laissé aux porteurs.</p></div>
-      <div class="card line" style="--c:var(--green)"><span class="k">Transparence</span><h3>Un choix confirmé</h3><p>Le niveau est affiché sans ambiguïté et les porteurs confirment explicitement leur choix avant la signature du contrat.</p></div>
-      <div class="card line" style="--c:var(--green)"><span class="k">Garanties</span><h3>Les mêmes règles</h3><p>Jalons, retouches encadrées et arbitrage s'appliquent comme pour tout autre profil, sur la base des critères écrits.</p></div>
+    <div class="shd"><h2>Recommandations et boosts : deux espaces séparés</h2><p>Un boost n'influence jamais les recommandations.</p></div>
+    <div class="zones">
+      <div class="zone" style="--c:var(--acc)">
+        <div class="zt">Recommandé pour toi</div>
+        <div class="zs">Basé uniquement sur les affinités</div>
+        <div class="zi"><span>Mission UV · Projet Aube</span><span class="chips"><span class="chip acc">Lo-fi</span><span class="chip acc">RPG</span></span></div>
+        <div class="zi"><span>Textures · Projet Néon</span><span class="chips"><span class="chip acc">Pixel art</span></span></div>
+        <div class="zi"><span>Props · Projet Brume</span><span class="chips"><span class="chip acc">Cozy</span></span></div>
+      </div>
+      <div class="zone dash" style="--c:#fff">
+        <div class="zt">Mis en avant</div>
+        <div class="zs">Boost payant, toujours signalé</div>
+        <div class="zi"><span>Profil · rigger indépendant</span><span class="badge">Boost</span></div>
+        <div class="zi"><span>Annonce · Projet Orbite</span><span class="badge">Boost</span></div>
+        <div class="zi"><span>Profil · étudiante en animation</span><span class="badge" style="border-color:var(--green)">Boost offert</span></div>
+      </div>
     </div>
   </div>
 </main>
@@ -874,7 +1104,67 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
         <li>Un nombre de retouches limité et une validation tacite en l'absence de réponse.</li>
         <li>Le droit de présenter son travail dans son portfolio à la sortie du jeu.</li>
         <li>Une note et un niveau conservés d'un projet à l'autre.</li>
+        <li>Des boosts offerts aux étudiants et aux débutants.</li>
       </ul>
+    </div>
+  </div>
+</main>
+
+<main class="view" id="abus" data-title="Notes et abus" data-cat="La confiance" hidden>
+  <header class="phead">
+    <div><p class="kicker"></p><h1>Notes et lutte contre les abus</h1></div>
+    <p class="lead">La confiance repose sur des notes fiables et une tolérance zéro envers les abus. Les deux parties sont notées, et chaque abus est sanctionné.</p>
+  </header>
+
+  <div class="shd"><h2>La notation à l'aveugle</h2><p>Uniquement après une mission réelle, payée sur la plateforme.</p></div>
+  <div class="flow" role="img" aria-label="Schéma : le porteur et le contributeur notent chacun de leur côté ; les notes restent masquées jusqu'à ce que les deux aient noté ; elles sont ensuite publiées en même temps.">
+    <div class="vflow">
+      <div class="fbox" style="--c:var(--blue)"><span class="k">Porteur</span><b>Note le contributeur</b></div>
+      <div class="fbox" style="--c:var(--orange)"><span class="k">Contributeur</span><b>Note le porteur</b></div>
+    </div>
+    <span class="arr"></span>
+    <div class="fbox" style="--c:#777"><span class="k">En attente</span><b>Notes masquées</b><span>tant que les deux n'ont pas noté</span></div>
+    <span class="arr"></span>
+    <div class="fbox" style="--c:var(--acc)"><span class="k">Publication</span><b>Simultanée</b><span>aucune note de représailles possible</span></div>
+  </div>
+
+  <div class="sec split">
+    <div>
+      <div class="shd"><h2>Des critères détaillés</h2></div>
+      <p class="note" style="margin:0 0 10px">Le porteur note</p>
+      <div class="chips"><span class="chip">Qualité</span><span class="chip">Délais</span><span class="chip">Communication</span><span class="chip">Respect de la demande</span></div>
+      <p class="note" style="margin:22px 0 10px">Le contributeur note</p>
+      <div class="chips"><span class="chip">Clarté de la demande</span><span class="chip">Rapidité de validation</span><span class="chip">Respect du périmètre</span><span class="chip">Communication</span></div>
+    </div>
+    <div>
+      <div class="shd"><h2>Un avantage pour qui note</h2></div>
+      <div class="tile acc" style="--c:var(--blue)"><span class="tl1">Badge porteur</span><span class="tv">Porteur fiable</span><span>pour les porteurs qui notent et valident dans les délais : il attire de meilleurs profils.</span><br><span class="pi">Piste : remise sur la commission</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="shd"><h2>Contre le contournement de la plateforme</h2></div>
+    <div class="steps three">
+      <div class="step c-coral"><span class="num">Avant le contrat</span><h3>Coordonnées masquées</h3><p>Messagerie filtrée : e-mails, numéros et liens externes sont bloqués.</p></div>
+      <div class="step c-acc"><span class="num">Contrat signé</span><h3>Échanges libres</h3><p>Dans le cadre de la mission, avec le séquestre qui protège les deux parties.</p></div>
+      <div class="step c-blue"><span class="num">Après la mission</span><h3>Non-contournement</h3><p>Une clause impose de continuer à travailler ensemble via M&#8209;07 pendant une période définie.</p></div>
+    </div>
+  </div>
+
+  <div class="sec split">
+    <div>
+      <div class="shd"><h2>Les abus surveillés</h2></div>
+      <div class="chips"><span class="chip cor">Contournement de la plateforme</span><span class="chip cor">Mensonge sur le niveau</span><span class="chip cor">Faux avis</span><span class="chip cor">Comptes multiples</span><span class="chip cor">Candidatures en masse</span></div>
+    </div>
+    <div>
+      <div class="shd"><h2>Des sanctions progressives</h2></div>
+      <div class="flow sanc">
+        <div class="fbox"><span class="k">1</span><b>Avertissement</b></div>
+        <span class="arr"></span>
+        <div class="fbox"><span class="k">2</span><b>Suspension</b></div>
+        <span class="arr"></span>
+        <div class="fbox"><span class="k">3</span><b>Exclusion</b><span>et perte des notes</span></div>
+      </div>
     </div>
   </div>
 </main>
@@ -966,18 +1256,18 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   <div class="tiles">
     <div class="tile"><span class="tl1">Budget</span><b>15&nbsp;000&nbsp;€</b><span>5&nbsp;000&nbsp;€ par associé</span></div>
     <div class="tile"><span class="tl1">Contributeurs</span><b>6</b><span>du débutant au pro</span></div>
-    <div class="tile"><span class="tl1">Missions</span><b>13</b><span>sur quatre postes</span></div>
+    <div class="tile"><span class="tl1">Missions</span><b>13</b><span>dont 4 réservées aux débutants et étudiants</span></div>
     <div class="tile"><span class="tl1">Durée</span><b>5&nbsp;mois</b><span>jusqu'à la démo jouable</span></div>
   </div>
   <div class="sec">
     <div class="shd"><h2>Le déroulé</h2></div>
     <ul class="tl">
       <li><div class="d">Semaine 1</div><div><b>Création de la fiche projet</b><span class="s">Les trois associés ouvrent l'espace projet et versent 5&nbsp;000&nbsp;€ chacun. La contribution de chacun est enregistrée.</span></div></li>
-      <li><div class="d">Semaine 2</div><div><b>Publication des missions</b><span class="s">Treize missions sont publiées sur quatre postes. Les candidatures sont filtrées par compétence et par niveau.</span></div></li>
-      <li><div class="d">Semaine 3</div><div><b>Contractualisation</b><span class="s">Six profils sont retenus, dont deux débutants choisis en connaissance de cause. Les contrats sont signés et les fonds placés sous séquestre.</span></div></li>
+      <li><div class="d">Semaine 2</div><div><b>Publication des missions</b><span class="s">Treize missions sont publiées, dont quatre réservées aux débutants et aux étudiants (dépliage UV et motion design).</span></div></li>
+      <li><div class="d">Semaine 3</div><div><b>Contractualisation</b><span class="s">Six profils sont retenus. Inès, étudiante, est recommandée sur les missions UV pour ses affinités lo-fi et RPG. Les contrats sont signés et les fonds placés sous séquestre.</span></div></li>
       <li><div class="d">Mois 2 à 4</div><div><b>Production</b><span class="s">Les jalons sont livrés, contrôlés et payés au fil de l'eau.</span></div></li>
       <li><div class="d">Mois 3</div><div><b>Départ d'un contributeur</b><span class="s">Un développeur quitte le projet. Il conserve la rémunération de ses deux jalons validés ; le reste de sa mission est republié avec le solde.</span></div></li>
-      <li><div class="d">Mois 5</div><div><b>Démo jouable</b><span class="s">Les associés disposent d'une démo pour démarcher un éditeur ou lever des fonds. La débutante en UV passe au niveau intermédiaire.</span></div></li>
+      <li><div class="d">Mois 5</div><div><b>Démo jouable</b><span class="s">Les associés disposent d'une démo pour démarcher un éditeur ou lever des fonds. Les deux étudiants progressent d'un niveau sur leur compétence.</span></div></li>
     </ul>
   </div>
 </main>
@@ -1017,10 +1307,11 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <div class="shd"><h2>Sources de revenus</h2></div>
     <div class="grid g4">
       <div class="card" style="--c:var(--acc)"><span class="k">Principale</span><h3>Commission</h3><p>8 % du montant de chaque mission, payés par le porteur (hypothèse de travail).</p></div>
+      <div class="card" style="--c:var(--acc)"><span class="k">Complémentaire</span><h3>Boosts</h3><p>Mise en avant payante d'un profil ou d'une annonce, toujours signalée. Un boost offert par mois aux étudiants et débutants.</p></div>
       <div class="card" style="--c:#8a8a8a"><span class="k">Complémentaire</span><h3>Abonnement studio</h3><p>Outils avancés : gestion multi-projets, statistiques, stockage étendu.</p></div>
-      <div class="card" style="--c:#8a8a8a"><span class="k">Complémentaire</span><h3>Mise en avant</h3><p>Visibilité accrue pour une mission ou un profil.</p></div>
-      <div class="card" style="--c:#8a8a8a"><span class="k">Complémentaire</span><h3>Partenariats écoles</h3><p>Un accès des étudiants à des missions réelles et rémunérées, en lien avec les écoles de jeu vidéo.</p></div>
+      <div class="card" style="--c:#8a8a8a"><span class="k">Complémentaire</span><h3>Partenariats écoles</h3><p>Un accès des étudiants à des missions réelles et rémunérées, en lien avec les écoles.</p></div>
     </div>
+    <p class="note">Piste pour plus tard : des candidatures payantes pour les pros au-delà d'un quota, une fois le volume de missions suffisant. Au lancement, les candidatures restent gratuites pour tous.</p>
   </div>
   <p class="src">Sources :
     <a href="https://www.upwork.com/resources/is-upwork-free" target="_blank" rel="noopener">Upwork, tarifs 2026 (mentionne Fiverr)</a> ·
@@ -1041,14 +1332,16 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
     <div class="card line" style="--c:var(--orange)"><span class="k">Statut</span><h3>Des contributeurs qui facturent</h3><p>Chaque contributeur doit disposer d'un statut lui permettant de facturer, le plus souvent la micro-entreprise, accessible aux étudiants. La plateforme accompagne cette étape à l'inscription.</p></div>
     <div class="card line" style="--c:var(--acc)"><span class="k">Droits d'auteur</span><h3>Une cession écrite, livrable par livrable</h3><p>La cession doit être écrite et chaque droit cédé mentionné distinctement. La cession globale d'œuvres futures étant interdite, les droits sont cédés au fil des livrables validés.</p></div>
     <div class="card line" style="--c:var(--coral)"><span class="k">Indépendance</span><h3>L'absence de lien de subordination</h3><p>Pour écarter tout risque de requalification en salariat, les contributeurs choisissent leurs missions et organisent librement leur travail, sans horaires imposés.</p></div>
-    <div class="card" style="--c:#8a8a8a;border-color:#444"><span class="k">Avertissement</span><h3>Pas un avis juridique</h3><p>Ce dossier pose les grandes lignes. Chaque point sera validé avec un avocat avant le lancement.</p></div>
+    <div class="card line" style="--c:#fff"><span class="k">Intelligence artificielle</span><h3>Des recommandations expliquées</h3><p>Le règlement européen sur l'IA classe à haut risque les usages liés au recrutement ; ces obligations s'appliquent à partir du 2 décembre 2027. Des affinités expliquées, sans note ni tri, et un choix laissé au porteur vont dans le bon sens.</p></div>
   </div>
+  <p class="note">Ce dossier n'est pas un avis juridique : chaque point sera validé avec un avocat avant le lancement.</p>
   <p class="src">Sources :
     <a href="https://www.legifrance.gouv.fr/codes/id/LEGIARTI000006278969/2026-04-19" target="_blank" rel="noopener">Code de la propriété intellectuelle (Légifrance)</a> ·
     <a href="https://www.artcena.fr/artcena-juridique/droits-dauteurs-et-droits-voisins/droit-dauteur/cession-des-droits-dauteur" target="_blank" rel="noopener">Cession des droits d'auteur (ARTCENA)</a> ·
     <a href="https://www.impots.gouv.fr/transfert-dinformations-en-application-des-dispositifs-dpi-dac7-plateformes-deconomie-collaborative" target="_blank" rel="noopener">DPI-DAC7 (impots.gouv.fr)</a> ·
     <a href="https://stripe.com/fr/resources/more/how-to-offer-secure-payments-on-marketplaces-in-france" target="_blank" rel="noopener">Paiements sur les marketplaces en France (Stripe)</a> ·
-    <a href="https://www.artcena.fr/precis-juridique/droit-du-travail/embauche-et-contrats-de-travail/benevolat" target="_blank" rel="noopener">Lien de subordination (ARTCENA)</a>
+    <a href="https://www.artcena.fr/precis-juridique/droit-du-travail/embauche-et-contrats-de-travail/benevolat" target="_blank" rel="noopener">Lien de subordination (ARTCENA)</a> ·
+    <a href="https://donneespersonnelles.fr/omnibus-numerique-ia" target="_blank" rel="noopener">Report des obligations IA à haut risque</a>
   </p>
 </main>
 
@@ -1060,19 +1353,20 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   </header>
   <div class="steps five">
     <div class="step c-acc"><span class="num">Étape 1</span><h3>Validation du besoin</h3><p>Entretiens avec une dizaine de porteurs de projet et une dizaine de contributeurs, étudiants et indépendants.</p></div>
-    <div class="step c-acc"><span class="num">Étape 2</span><h3>Maquettes</h3><p>Conception des écrans clés : fiche projet, fiche mission, fiche profil, suivi des paiements.</p></div>
+    <div class="step c-acc"><span class="num">Étape 2</span><h3>Maquettes</h3><p>Écrans clés : fiche projet, fiche profil, recommandations, suivi des paiements.</p></div>
     <div class="step c-acc"><span class="num">Étape 3</span><h3>Cadre juridique</h3><p>Rédaction des modèles de contrat avec un avocat, choix du prestataire de paiement.</p></div>
     <div class="step c-acc"><span class="num">Étape 4</span><h3>Version minimale</h3><p>Fiches projet, missions, séquestre et double validation. Contrôle humain au lancement, automatisation ensuite.</p></div>
     <div class="step c-acc"><span class="num">Étape 5</span><h3>Projet pilote</h3><p>Un projet réel, quelques missions réelles, puis ajustements à partir des retours.</p></div>
   </div>
   <div class="sec">
     <div class="shd"><h2>Décisions à arrêter</h2><p>Avant le passage aux maquettes.</p></div>
-    <div class="grid g5">
+    <div class="grid g3">
       <div class="card line" style="--c:var(--orange)"><span class="k">Marque</span><h3>Identité de M&#8209;07</h3><p>Logo, charte et positionnement.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Contrôle</span><h3>IA, humain ou hybride</h3><p>Le modèle à deux niveaux est la piste actuelle.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Tarification</span><h3>Grille ou prix libre</h3><p>Grille imposée, fourchette indicative ou prix libre.</p></div>
       <div class="card line" style="--c:var(--orange)"><span class="k">Marché</span><h3>France ou international</h3><p>Le droit et la fiscalité diffèrent selon les pays.</p></div>
-      <div class="card line" style="--c:var(--orange)"><span class="k">Commission</span><h3>Taux et répartition</h3><p>Taux définitif et partage entre porteurs et contributeurs.</p></div>
+      <div class="card line" style="--c:var(--orange)"><span class="k">Commission</span><h3>Taux et répartition</h3><p>Taux définitif, remise pour le recrutement de débutants.</p></div>
+      <div class="card line" style="--c:var(--orange)"><span class="k">Équilibre</span><h3>Quotas et boosts</h3><p>Nombre de candidatures, missions en cours, prix des boosts.</p></div>
     </div>
   </div>
 </main>
@@ -1121,7 +1415,7 @@ ul.plain li::before{content:">";position:absolute;left:0;opacity:.55}
   });
 
   /* ---------- Pages ---------- */
-  var order=['home','marche','demande','valeur','acteurs','fiche','cycle','profils','jalons','garanties','contrat','verification','cas','modele','legal','feuille'];
+  var order=['home','marche','demande','valeur','debutants','acteurs','fiche','cycle','profils','reco','jalons','garanties','abus','contrat','verification','cas','modele','legal','feuille'];
   var total=order.length-1;
   var pad=function(n){return (n<10?'0':'')+n;};
   var views={};
